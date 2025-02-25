@@ -8,7 +8,7 @@ public class Electron_Remover : MonoBehaviour
   
    public void remover(GameObject thing)
     {
-        thing = 
+       
        if (thing is GameObject)
         {
             
