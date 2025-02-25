@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Models_Scene.unity
     guid: 98cfd84f340682e419ebed2bb5d1c57b
   - enabled: 1
-    path: Assets/Scenes/ElectronSim_Scene.unity
+    path: Assets/Scenes/Depricated.unity
     guid: 80125109740adfd47a8702e054daa927
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a237895ce81dfd140b9ebb416efb3a2a, type: 2}
