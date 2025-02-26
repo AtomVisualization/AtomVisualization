@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
-
+using Oculus.Interaction;
 
 public class Electron_Remover : MonoBehaviour
 {
-  
-   public void remover(GameObject thing)
-    {
-       
-       if (thing is GameObject)
-        {
-            
-            Object.Destroy(thing);
-        }
+    GameObject[] clones = GameObject.FindGameObjectsWithTag("destroy");
+
+   public void bye()
+   {
+    foreach(GameObject Clone in clones) {
+        Destroy(Clone);
     }
+   }
 }
+
