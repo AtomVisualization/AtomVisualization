@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using UnityEngine;
+using Unity.VisualScripting;
+
 using Oculus.Interaction;
+using System.Runtime.CompilerServices;
+using Meta.WitAi;
+
+
 
 public class Electron_Remover : MonoBehaviour
-{
-    GameObject[] clones = GameObject.FindGameObjectsWithTag("destroy");
+ {
 
-   public void bye()
-   {
-    foreach(GameObject Clone in clones) {
-        Destroy(Clone);
+    private void Start()
+    {
+        GameObject[] gs = GameObject.FindGameObjectsWithTag("destroy");
+
+        foreach (GameObject g in gs) 
+        {
+            Debug.Log(g.name);
+        }
     }
-   }
-}
+    }
 

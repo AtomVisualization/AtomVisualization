@@ -9132,6 +9132,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1741370719564424412, guid: 12f847ccb35ae1d4198cfe9e8c98c7d7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1171859343}
+    - targetCorrespondingSourceObject: {fileID: 1741370719564424412, guid: 12f847ccb35ae1d4198cfe9e8c98c7d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1171859352}
   m_SourcePrefab: {fileID: 100100000, guid: 12f847ccb35ae1d4198cfe9e8c98c7d7, type: 3}
 --- !u!1 &1171859339 stripped
 GameObject:
@@ -9240,6 +9243,18 @@ MonoBehaviour:
   _whenCancel:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1171859352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171859339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef98b4d5f52d134ab765dfe212a8741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1185463132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12681,7 +12696,6 @@ GameObject:
   - component: {fileID: 1627677026}
   - component: {fileID: 1627677025}
   - component: {fileID: 1627677024}
-  - component: {fileID: 1627677030}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -12701,7 +12715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactableView: {fileID: 0}
+  _interactableView: {fileID: 448214676}
   _whenHover:
     m_PersistentCalls:
       m_Calls: []
@@ -12711,13 +12725,25 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1627677030}
-        m_TargetAssemblyTypeName: Electron_Remover, Assembly-CSharp
-        m_MethodName: bye
-        m_Mode: 1
+      - m_Target: {fileID: 1171859339}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1171859339}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -12852,18 +12878,6 @@ Transform:
   - {fileID: 448214675}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1627677030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627677022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ef98b4d5f52d134ab765dfe212a8741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1651371908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13742,7 +13756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 578834e76686680419070051a0a48089, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
