@@ -1,25 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.VisualScripting;
-
-using Oculus.Interaction;
-using System.Runtime.CompilerServices;
-using Meta.WitAi;
-
 
 
 public class Electron_Remover : MonoBehaviour
- {
-
-    private void Start()
+{
+    private void OnTriggerEnter(Collider other)
     {
-        GameObject[] gs = GameObject.FindGameObjectsWithTag("destroy");
-
-        foreach (GameObject g in gs) 
+        // Check if the collider that entered the trigger zone has the tag "Electron"
+        if (other.CompareTag("Electron"))
         {
-            Debug.Log(g.name);
+            // Print a message to the console for debugging
+            Debug.Log("Electron entered the trigger zone!");
+
+            // Destroy the game object with the "Electron" tag
+            Destroy(other.gameObject);
         }
     }
-    }
-
+}

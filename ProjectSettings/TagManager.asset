@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - delete
+  - Electron
   layers:
   - Default
   - TransparentFX
