@@ -2273,11 +2273,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Activate: {fileID: 61777127}
+  Activate2: {fileID: 0}
   Deactivate:
   - {fileID: 752657618}
   - {fileID: 573202190}
   - {fileID: 628368518}
   - {fileID: 1267868321}
+  original: {fileID: 0}
 --- !u!1 &336253345
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,11 +5136,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Activate: {fileID: 573202190}
+  Activate2: {fileID: 0}
   Deactivate:
   - {fileID: 752657618}
   - {fileID: 61777127}
   - {fileID: 628368518}
   - {fileID: 1267868321}
+  original: {fileID: 0}
 --- !u!1001 &992461448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5860,11 +5864,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Activate: {fileID: 1267868321}
+  Activate2: {fileID: 0}
   Deactivate:
   - {fileID: 752657618}
   - {fileID: 61777127}
   - {fileID: 573202190}
   - {fileID: 628368518}
+  original: {fileID: 0}
 --- !u!114 &1072147077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6323,11 +6329,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Activate: {fileID: 752657618}
+  Activate2: {fileID: 0}
   Deactivate:
   - {fileID: 61777127}
   - {fileID: 573202190}
   - {fileID: 628368518}
   - {fileID: 1267868321}
+  original: {fileID: 0}
 --- !u!1 &1097041534
 GameObject:
   m_ObjectHideFlags: 0
@@ -11975,11 +11983,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Activate: {fileID: 628368518}
+  Activate2: {fileID: 0}
   Deactivate:
   - {fileID: 752657618}
   - {fileID: 61777127}
   - {fileID: 573202190}
   - {fileID: 1267868321}
+  original: {fileID: 0}
 --- !u!114 &2085502705
 MonoBehaviour:
   m_ObjectHideFlags: 0
