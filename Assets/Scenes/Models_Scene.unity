@@ -2278,6 +2278,7 @@ MonoBehaviour:
   - {fileID: 573202190}
   - {fileID: 628368518}
   - {fileID: 1267868321}
+  original: {fileID: 0}
 --- !u!1 &336253345
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,6 +5140,7 @@ MonoBehaviour:
   - {fileID: 61777127}
   - {fileID: 628368518}
   - {fileID: 1267868321}
+  original: {fileID: 0}
 --- !u!1001 &992461448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5865,6 +5867,7 @@ MonoBehaviour:
   - {fileID: 61777127}
   - {fileID: 573202190}
   - {fileID: 628368518}
+  original: {fileID: 0}
 --- !u!114 &1072147077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6328,6 +6331,7 @@ MonoBehaviour:
   - {fileID: 573202190}
   - {fileID: 628368518}
   - {fileID: 1267868321}
+  original: {fileID: 0}
 --- !u!1 &1097041534
 GameObject:
   m_ObjectHideFlags: 0
@@ -8726,7 +8730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 578834e76686680419070051a0a48089, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11980,6 +11984,7 @@ MonoBehaviour:
   - {fileID: 61777127}
   - {fileID: 573202190}
   - {fileID: 1267868321}
+  original: {fileID: 0}
 --- !u!114 &2085502705
 MonoBehaviour:
   m_ObjectHideFlags: 0
