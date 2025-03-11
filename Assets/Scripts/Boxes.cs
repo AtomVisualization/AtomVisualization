@@ -26,16 +26,9 @@ public class Boxes : MonoBehaviour
 
         if (bond == "NaCl")
         {
-            if (box1.activeSelf != true)
-            {
+          
                 box1.SetActive(true);
                 box2.SetActive(true);
-            }
-            else
-            {
-                box1.SetActive(false);
-                box2.SetActive(false);
-            }
         }
         else if (bond == "H2")
         {
@@ -48,28 +41,18 @@ public class Boxes : MonoBehaviour
 
         else if (bond == "CH4")
         {
-            if (box4.activeSelf != true )
-            {
+            
                 box1.SetActive(true);
                 box2.SetActive(true);
                 box3.SetActive(true);
                 box4.SetActive(true);
                 box5.SetActive(true);
-            }
-            else
-            {
-                box1.SetActive(false);
-                box2.SetActive(false);
-                box3.SetActive(false);
-                box4.SetActive(false);
-                box5.SetActive(false);
-            }
         }
         else if (bond == "H2O")
         {
-            box1.SetActive(true);
-            box2.SetActive(true);
-            box3.SetActive(true);
+                box1.SetActive(true);
+                box2.SetActive(true);
+                box3.SetActive(true);
         }
     }
     
