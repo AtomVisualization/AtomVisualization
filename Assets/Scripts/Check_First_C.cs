@@ -15,7 +15,7 @@ public class Check_First_C : MonoBehaviour
     public GameObject success;
 
     public GameObject fail;
-    public void Check() 
+    public void Check()
     {
         elecc = Global_Var_First.elec1;
 
@@ -28,47 +28,48 @@ public class Check_First_C : MonoBehaviour
 
 
 
-                if (namee == "Carbon") 
+        if (namee == "Carbon")
+        {
+            if (elecc == 2)
+            {
+                if (elecc2 == 4)
                 {
-                    if (elecc == 2) 
-                    {
-                        if (elecc2 == 4)
-                        {
-                          
-                                 success.SetActive(true);
-                                 
-                            Invoke("Deactivate_S", 3);
 
-                        }
+                    success.SetActive(true);
 
-                        else 
-                {
-                    fail.SetActive(true);
-                Invoke("Deactivate_F", 3);
+                    Invoke("Deactivate_S", 3);
+
                 }
-                    }  
-                    else
+
+                else
                 {
-                    
                     fail.SetActive(true);
                     Invoke("Deactivate_F", 3);
                 }
-            
-        
+            }
+            else
+            {
+
+                fail.SetActive(true);
+                Invoke("Deactivate_F", 3);
+            }
+
+
         }
 
 
 
-        else if (namee == "Hydrogen") 
+        else if (namee == "Hydrogen")
         {
-            if (elecc == 1) {
+            if (elecc == 1)
+            {
                 success.SetActive(true);
 
                 Invoke("Deactivate_S", 3);
 
             }
 
-            else 
+            else
             {
                 fail.SetActive(true);
                 Invoke("Deactivate_F", 3);
@@ -76,89 +77,90 @@ public class Check_First_C : MonoBehaviour
         }
 
 
-        else if (namee == "Nitrogen") 
+        else if (namee == "Nitrogen")
         {
-            if (elecc == 2) 
+            if (elecc == 2)
             {
-                if (elecc2 == 5) 
+                if (elecc2 == 5)
                 {
-                     success.SetActive(true);
-                                 
-                            Invoke("Deactivate_S", 3);
+                    success.SetActive(true);
+
+                    Invoke("Deactivate_S", 3);
 
                 }
 
-                else 
+                else
                 {
                     fail.SetActive(true);
-                Invoke("Deactivate_F", 3);
+                    Invoke("Deactivate_F", 3);
                 }
             }
-            else 
+            else
             {
                 fail.SetActive(true);
                 Invoke("Deactivate_F", 3);
             }
         }
 
-        else if (namee == "Oxygen") 
+        else if (namee == "Oxygen")
         {
-             if (elecc == 2) 
+            if (elecc == 2)
             {
-                if (elecc2 == 6) 
+                if (elecc2 == 6)
                 {
-                     success.SetActive(true);
-                                 
-                            Invoke("Deactivate_S", 3);
+                    success.SetActive(true);
+
+                    Invoke("Deactivate_S", 3);
 
                 }
-                else 
+                else
                 {
                     fail.SetActive(true);
-                Invoke("Deactivate_F", 3);
+                    Invoke("Deactivate_F", 3);
                 }
             }
-            else 
+            else
             {
                 fail.SetActive(true);
                 Invoke("Deactivate_F", 3);
             }
         }
 
-        else if (namee == "Phosphorus") 
+        else if (namee == "Phosphorus")
         {
-             if (elecc == 2) 
+            if (elecc == 2)
             {
-                if (elecc2 == 8) 
+                if (elecc2 == 8)
                 {
-                    if (elecc3 == 5) 
+                    if (elecc3 == 5)
                     {
-                     success.SetActive(true);
-                                 
-                            Invoke("Deactivate_S", 3);
+                        success.SetActive(true);
+
+                        Invoke("Deactivate_S", 3);
                     }
 
-                    else 
-                     {
-                fail.SetActive(true);
-                Invoke("Deactivate_F", 3);
-            }
+                    else
+                    {
+                        fail.SetActive(true);
+                        Invoke("Deactivate_F", 3);
+                    }
 
                 }
-                else 
-            {
-                fail.SetActive(true);
-                Invoke("Deactivate_F", 3);
+                else
+                {
+                    fail.SetActive(true);
+                    Invoke("Deactivate_F", 3);
+                }
             }
-            }
-            else 
+            else
             {
                 fail.SetActive(true);
                 Invoke("Deactivate_F", 3);
             }
         }
 
-        else if (name == "Sodium")
+
+        else if (namee == "Sodium")
         {
             if (elecc == 2)
             {
@@ -191,7 +193,9 @@ public class Check_First_C : MonoBehaviour
             }
         }
 
-        else if (name == "Chlorine")
+
+
+        else if (namee == "Chlorine")
         {
             if (elecc == 2)
             {
@@ -223,7 +227,6 @@ public class Check_First_C : MonoBehaviour
                 Invoke("Deactivate_F", 3);
             }
         }
-
     }
 
     void Deactivate_S() {
