@@ -158,6 +158,72 @@ public class Check_First_C : MonoBehaviour
             }
         }
 
+        else if (name == "Sodium")
+        {
+            if (elecc == 2)
+            {
+                if (elecc2 == 8)
+                {
+                    if (elecc3 == 1)
+                    {
+                        success.SetActive(true);
+
+                        Invoke("Deactivate_S", 3);
+                    }
+
+                    else
+                    {
+                        fail.SetActive(true);
+                        Invoke("Deactivate_F", 3);
+                    }
+
+                }
+                else
+                {
+                    fail.SetActive(true);
+                    Invoke("Deactivate_F", 3);
+                }
+            }
+            else
+            {
+                fail.SetActive(true);
+                Invoke("Deactivate_F", 3);
+            }
+        }
+
+        else if (name == "Chlorine")
+        {
+            if (elecc == 2)
+            {
+                if (elecc2 == 8)
+                {
+                    if (elecc3 == 7)
+                    {
+                        success.SetActive(true);
+
+                        Invoke("Deactivate_S", 3);
+                    }
+
+                    else
+                    {
+                        fail.SetActive(true);
+                        Invoke("Deactivate_F", 3);
+                    }
+
+                }
+                else
+                {
+                    fail.SetActive(true);
+                    Invoke("Deactivate_F", 3);
+                }
+            }
+            else
+            {
+                fail.SetActive(true);
+                Invoke("Deactivate_F", 3);
+            }
+        }
+
     }
 
     void Deactivate_S() {
