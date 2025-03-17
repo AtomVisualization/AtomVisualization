@@ -11535,7 +11535,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c867ceccb34ffd24f81e918473b107ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0949407
+      value: 2.094941
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c867ceccb34ffd24f81e918473b107ad, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21014,7 +21014,7 @@ Transform:
   m_GameObject: {fileID: 777145442}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2047284, y: 3.01, z: -4.83}
+  m_LocalPosition: {x: -2.204728, y: 3.01, z: -4.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31150,7 +31150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 578834e76686680419070051a0a48089, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0949407
+      value: 2.094941
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 578834e76686680419070051a0a48089, type: 3}
       propertyPath: m_LocalPosition.y
@@ -53298,6 +53298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2020925195}
+  - component: {fileID: 2020925196}
   m_Layer: 0
   m_Name: H20
   m_TagString: Untagged
@@ -53323,6 +53324,27 @@ Transform:
   - {fileID: 626151452}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2020925196
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020925194}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4dfc93ee1ea25e54c9072b9240cb08c4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2023981805
 GameObject:
   m_ObjectHideFlags: 0
@@ -57148,7 +57170,7 @@ Transform:
   m_GameObject: {fileID: 6781842259987897272}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.01726, y: 1.4174662, z: 4.7572536}
+  m_LocalPosition: {x: 2.01726, y: 1.417466, z: 4.7572536}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
