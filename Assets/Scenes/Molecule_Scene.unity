@@ -258,7 +258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &183126972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3444,7 +3444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1310765730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5002,6 +5002,7 @@ GameObject:
   - component: {fileID: 1765551840}
   - component: {fileID: 1765551842}
   - component: {fileID: 1765551841}
+  - component: {fileID: 1765551843}
   m_Layer: 0
   m_Name: Snap_Interactable
   m_TagString: Untagged
@@ -5078,13 +5079,13 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765551841}
-        m_TargetAssemblyTypeName: Check_Bonds, Assembly-CSharp
-        m_MethodName: check
-        m_Mode: 1
+      - m_Target: {fileID: 1765551843}
+        m_TargetAssemblyTypeName: Tag_Switcher, Assembly-CSharp
+        m_MethodName: Switcher1
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5105,6 +5106,18 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1765551843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765551838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3994be1917a2c4f9e6c226e0d80656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1774277608
 GameObject:
   m_ObjectHideFlags: 0
@@ -6285,6 +6298,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2254426742256141430, guid: 93f37f8b06955024c9eef371ee124358, type: 3}
       propertyPath: m_Name
+      value: Hydrogen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254426742256141430, guid: 93f37f8b06955024c9eef371ee124358, type: 3}
+      propertyPath: m_TagString
       value: Hydrogen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
