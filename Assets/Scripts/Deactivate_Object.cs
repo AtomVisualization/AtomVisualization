@@ -18,15 +18,20 @@ public class Deactivate_Object : MonoBehaviour
     public void Deactivate()
     {
         GameObject[] electrons = GameObject.FindGameObjectsWithTag("Electron");
+        GameObject[] hydrogens = GameObject.FindGameObjectsWithTag("Hydrogen");
 
         foreach (GameObject electron in electrons)
         {
 
 
             Destroy(electron);
-            Debug.Log("Electron destroyed: " + electron.name);
 
 
+        }
+
+        foreach (GameObject hydrogen in hydrogens)
+        {
+            Destroy(hydrogen);
         }
         Instantiate(original1);
         Instantiate(original2);
