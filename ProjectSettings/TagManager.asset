@@ -6,6 +6,13 @@ TagManager:
   tags:
   - delete
   - Electron
+  - Carbon
+  - Hydrogen
+  - Nitrogen
+  - Oxygen
+  - Phospherus
+  - Sodium
+  - Chlorine
   layers:
   - Default
   - TransparentFX
