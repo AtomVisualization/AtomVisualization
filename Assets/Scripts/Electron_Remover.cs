@@ -16,6 +16,8 @@ public class Electron_Remover : MonoBehaviour
 
             // Destroy the game object with the "Electron" tag
             Destroy(other.gameObject);
+
+            
         }
     }
 }

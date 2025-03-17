@@ -20,7 +20,7 @@ public class Tag_Switcher : MonoBehaviour
         }
     }
 
-    public void Switcher2(Collider other)
+    public void Switcher2()
     {
         checkk = false;
     }
