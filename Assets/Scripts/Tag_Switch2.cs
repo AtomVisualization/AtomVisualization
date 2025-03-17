@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tag_Switcher : MonoBehaviour
+public class Tag_Switch2 : MonoBehaviour
 {
-    public static bool checkk = false;
+    public static bool checkk2 = false;
     private string bond = "nill";
     private void OnTriggerEnter(Collider other)
     {
@@ -14,14 +14,14 @@ public class Tag_Switcher : MonoBehaviour
         {
             if (other.CompareTag("Hydrogen"))
             {
-                checkk = true;
+                checkk2 = true;
             }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        checkk = false;
-        
+        checkk2 = false;
+
     }
 }
