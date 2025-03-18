@@ -13,6 +13,8 @@ TagManager:
   - Phospherus
   - Sodium
   - Chlorine
+  - boxes
+  - bond
   layers:
   - Default
   - TransparentFX

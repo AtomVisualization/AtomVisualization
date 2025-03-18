@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,13 +16,20 @@ public class Tag_Switcher : MonoBehaviour
             if (other.CompareTag("Hydrogen"))
             {
                 checkk = true;
+                Debug.Log("checkk is " + checkk);
             }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        if (other.CompareTag("Hydrogen") || other.CompareTag("Electron"))
         checkk = false;
+        Debug.Log("checkk is " + checkk);
         
+    }
+    public void CheckFalse()
+    {
+        checkk = false;
     }
 }

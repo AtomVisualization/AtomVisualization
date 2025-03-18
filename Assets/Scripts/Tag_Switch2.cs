@@ -15,13 +15,22 @@ public class Tag_Switch2 : MonoBehaviour
             if (other.CompareTag("Hydrogen"))
             {
                 checkk2 = true;
+                Debug.Log("checkk2 is " + checkk2);
             }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        checkk2 = false;
+        if (other.CompareTag("Hydrogen") || other.CompareTag("Electron"))
+            checkk2 = false;
+        Debug.Log("checkk is " + checkk2);
+    }
 
+    public void CheckFalse()
+    {
+        checkk2 = false;
     }
 }
+
+
