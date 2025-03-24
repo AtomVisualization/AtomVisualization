@@ -19,12 +19,29 @@ public class Tag_Switcher : MonoBehaviour
                 Debug.Log("checkk is " + checkk);
             }
         }
+
+        if (bond == "CH4")
+        {
+            if (other.CompareTag("Hydrogen"))
+            {
+                checkk = true;
+            }
+        }
+
+        if (bond == "NaCl")
+        {
+            if (other.CompareTag("Sodium"))
+            {
+                checkk = true;
+            }
+            
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Hydrogen") || other.CompareTag("Electron"))
-        checkk = false;
+        if (other.CompareTag("Hydrogen") || other.CompareTag("Electron") || other.CompareTag("Carbon") || other.CompareTag("Chlorine") || other.CompareTag("Sodium") || other.CompareTag("Oxygen"))
+            checkk = false;
         Debug.Log("checkk is " + checkk);
         
     }

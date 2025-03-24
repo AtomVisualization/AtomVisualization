@@ -18,6 +18,10 @@ public class Deactivate_Object : MonoBehaviour
     {
         GameObject[] electrons = GameObject.FindGameObjectsWithTag("Electron");
         GameObject[] hydrogens = GameObject.FindGameObjectsWithTag("Hydrogen");
+        GameObject[] carbons = GameObject.FindGameObjectsWithTag("Carbon");
+        GameObject[] sodiums = GameObject.FindGameObjectsWithTag("Sodium");
+        GameObject[] chlorines = GameObject.FindGameObjectsWithTag("Chlorine");
+        GameObject[] oxygens = GameObject.FindGameObjectsWithTag("Oxygen");
 
         foreach (GameObject electron in electrons)
         {
@@ -32,6 +36,27 @@ public class Deactivate_Object : MonoBehaviour
         {
             Destroy(hydrogen);
         }
+
+        foreach (GameObject carbon in carbons)
+        {
+            Destroy(carbon);
+        }
+
+        foreach (GameObject sodium in sodiums)
+        {
+            Destroy(sodium);
+        }
+
+        foreach (GameObject chlorine in chlorines)
+        {
+            Destroy(chlorine);
+        }
+
+        foreach (GameObject oxygen in oxygens)
+        {
+            Destroy(oxygen);
+        }
+
         Instantiate(original1);
         Instantiate(original2);
         Instantiate(original3);
