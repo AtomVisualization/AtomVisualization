@@ -15,6 +15,7 @@ TagManager:
   - Chlorine
   - boxes
   - bond
+  - new
   layers:
   - Default
   - TransparentFX
