@@ -5,6 +5,7 @@ using static UnityEngine.UI.Image;
 
 public class Deactivate_Object : MonoBehaviour
 {
+    // the original electrons in the molecule scene
     public GameObject original1;
     public GameObject original2;
     public GameObject original3;
@@ -23,6 +24,7 @@ public class Deactivate_Object : MonoBehaviour
         GameObject[] chlorines = GameObject.FindGameObjectsWithTag("Chlorine");
         GameObject[] oxygens = GameObject.FindGameObjectsWithTag("Oxygen");
 
+        // destroys phospherus and nitrogen
         foreach (GameObject electron in electrons)
         {
 
@@ -31,6 +33,8 @@ public class Deactivate_Object : MonoBehaviour
 
 
         }
+
+        // destroys everything else when you select a new bond option
 
         foreach (GameObject hydrogen in hydrogens)
         {
@@ -56,7 +60,7 @@ public class Deactivate_Object : MonoBehaviour
         {
             Destroy(oxygen);
         }
-
+        // Instantiates the original molecules
         Instantiate(original1);
         Instantiate(original2);
         Instantiate(original3);

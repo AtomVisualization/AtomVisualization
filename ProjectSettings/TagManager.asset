@@ -16,6 +16,7 @@ TagManager:
   - boxes
   - bond
   - new
+  - Rings
   layers:
   - Default
   - TransparentFX
