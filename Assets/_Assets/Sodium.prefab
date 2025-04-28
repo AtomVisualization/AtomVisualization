@@ -1870,6 +1870,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 578834e76686680419070051a0a48089, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7214903831714849369}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 578834e76686680419070051a0a48089, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5361370691743853929}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 578834e76686680419070051a0a48089, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 992540522001904822}
   m_SourcePrefab: {fileID: 100100000, guid: 578834e76686680419070051a0a48089, type: 3}
 --- !u!1 &8474525891641412390 stripped
 GameObject:
@@ -2014,7 +2020,19 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 992540522001904822}
+        m_TargetAssemblyTypeName: Bigger, Assembly-CSharp
+        m_MethodName: enlarge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -5361370691743853929}
         m_TargetAssemblyTypeName: Clone, Assembly-CSharp
         m_MethodName: clone
         m_Mode: 1
@@ -2028,7 +2046,19 @@ MonoBehaviour:
         m_CallState: 2
   _whenUnselect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 992540522001904822}
+        m_TargetAssemblyTypeName: Bigger, Assembly-CSharp
+        m_MethodName: shrink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _whenMove:
     m_PersistentCalls:
       m_Calls: []
@@ -2056,6 +2086,32 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.03231418
   m_Center: {x: -0.000000037252903, y: 0, z: -2.1175824e-21}
+--- !u!114 &-5361370691743853929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8474525891641412390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f0067b6bf729947a0410c6fe0ca56a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Original: {fileID: 8474525891641412390}
+  timesCloned: 0
+--- !u!114 &992540522001904822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8474525891641412390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e100ee1284adfa04dbb9f22d5f0a2d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9137874882838876572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 578834e76686680419070051a0a48089, type: 3}

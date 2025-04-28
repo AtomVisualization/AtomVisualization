@@ -18,6 +18,7 @@ public class Check_First_C : MonoBehaviour
     public GameObject ring1;
     public GameObject ring2;
     private int count = 0;
+    private int count2 = 0;
 
     public GameObject fail;
     public void Check()
@@ -160,8 +161,21 @@ public class Check_First_C : MonoBehaviour
         {
             if (elecc == 2)
             {
+                if (count == 0)
+                {
+                    ring1.SetActive(true);
+                    count = count + 1;
+                    return;
+                }
+
                 if (elecc2 == 8)
                 {
+                    if (count2 == 0)
+                    {
+                        ring2.SetActive(true);
+                        count2 = count2 + 1;
+                        return;
+                    }
                     if (elecc3 == 5)
                     {
                         success.SetActive(true);
@@ -187,6 +201,9 @@ public class Check_First_C : MonoBehaviour
                 fail.SetActive(true);
                 Invoke("Deactivate_F", 3);
             }
+
+            count = 0;
+            count2 = 0;
         }
 
 
@@ -194,8 +211,20 @@ public class Check_First_C : MonoBehaviour
         {
             if (elecc == 2)
             {
+                if (count == 0)
+                {
+                    ring1.SetActive(true);
+                    count = count + 1;
+                    return;
+                }
                 if (elecc2 == 8)
                 {
+                    if (count2 == 0)
+                    {
+                        ring2.SetActive(true);
+                        count2 = count2 + 1;
+                        return;
+                    }
                     if (elecc3 == 1)
                     {
                         success.SetActive(true);
@@ -221,6 +250,9 @@ public class Check_First_C : MonoBehaviour
                 fail.SetActive(true);
                 Invoke("Deactivate_F", 3);
             }
+
+            count = 0;
+            count2 = 0;
         }
 
 
@@ -229,8 +261,20 @@ public class Check_First_C : MonoBehaviour
         {
             if (elecc == 2)
             {
+                if (count == 0)
+                {
+                    ring1.SetActive(true);
+                    count = count + 1;
+                    return;
+                }
                 if (elecc2 == 8)
                 {
+                    if (count2 == 0)
+                    {
+                        ring2.SetActive(true);
+                        count2 = count2 + 1;
+                        return;
+                    }
                     if (elecc3 == 7)
                     {
                         success.SetActive(true);
@@ -256,6 +300,8 @@ public class Check_First_C : MonoBehaviour
                 fail.SetActive(true);
                 Invoke("Deactivate_F", 3);
             }
+            count = 0;
+            count2 = 0;
         }
     }
     // the deactivate methods for the success and fail text

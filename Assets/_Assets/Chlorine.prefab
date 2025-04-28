@@ -2350,6 +2350,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 578834e76686680419070051a0a48089, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1783034936335362047}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 578834e76686680419070051a0a48089, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3212654003330146357}
   m_SourcePrefab: {fileID: 100100000, guid: 578834e76686680419070051a0a48089, type: 3}
 --- !u!4 &4829036799433284938 stripped
 Transform:
@@ -2499,7 +2502,7 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: -3212654003330146357}
         m_TargetAssemblyTypeName: Clone, Assembly-CSharp
         m_MethodName: clone
         m_Mode: 1
@@ -2541,6 +2544,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.03231418
   m_Center: {x: -0.000000037252903, y: 0, z: -2.1175824e-21}
+--- !u!114 &-3212654003330146357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210664556924422128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f0067b6bf729947a0410c6fe0ca56a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Original: {fileID: 5210664556924422128}
+  timesCloned: 0
 --- !u!1001 &5013656195382163606
 PrefabInstance:
   m_ObjectHideFlags: 0
