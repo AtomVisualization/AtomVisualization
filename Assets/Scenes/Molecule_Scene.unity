@@ -2647,6 +2647,10 @@ MonoBehaviour:
   CH4_Anim: {fileID: 3643694464657848675, guid: 6de92c10d6c9da4459c05f5596e9acdb, type: 3}
   NaCl_Anim: {fileID: 1256221289333549246, guid: 9e882904c31835d49a8d65dd876b54f7, type: 3}
   H2O_Anim: {fileID: 8995633815528303089, guid: cbc7e48b007ba7949a17250dacf61394, type: 3}
+  Success_H2: {fileID: 0}
+  Success_CH4: {fileID: 0}
+  Success_NaCl: {fileID: 1945499870}
+  Success_H2O: {fileID: 0}
 --- !u!4 &890599549
 Transform:
   m_ObjectHideFlags: 0
@@ -4258,6 +4262,10 @@ MonoBehaviour:
   CH4_Anim: {fileID: 3643694464657848675, guid: 6de92c10d6c9da4459c05f5596e9acdb, type: 3}
   NaCl_Anim: {fileID: 1256221289333549246, guid: 9e882904c31835d49a8d65dd876b54f7, type: 3}
   H2O_Anim: {fileID: 8995633815528303089, guid: cbc7e48b007ba7949a17250dacf61394, type: 3}
+  Success_H2: {fileID: 0}
+  Success_CH4: {fileID: 0}
+  Success_NaCl: {fileID: 0}
+  Success_H2O: {fileID: 0}
 --- !u!1 &1274243557
 GameObject:
   m_ObjectHideFlags: 0
@@ -5357,6 +5365,10 @@ MonoBehaviour:
   CH4_Anim: {fileID: 3643694464657848675, guid: 6de92c10d6c9da4459c05f5596e9acdb, type: 3}
   NaCl_Anim: {fileID: 1256221289333549246, guid: 9e882904c31835d49a8d65dd876b54f7, type: 3}
   H2O_Anim: {fileID: 8995633815528303089, guid: cbc7e48b007ba7949a17250dacf61394, type: 3}
+  Success_H2: {fileID: 0}
+  Success_CH4: {fileID: 0}
+  Success_NaCl: {fileID: 0}
+  Success_H2O: {fileID: 0}
 --- !u!1 &1444150142
 GameObject:
   m_ObjectHideFlags: 0
@@ -6488,6 +6500,10 @@ MonoBehaviour:
   CH4_Anim: {fileID: 3643694464657848675, guid: 6de92c10d6c9da4459c05f5596e9acdb, type: 3}
   NaCl_Anim: {fileID: 1256221289333549246, guid: 9e882904c31835d49a8d65dd876b54f7, type: 3}
   H2O_Anim: {fileID: 8995633815528303089, guid: cbc7e48b007ba7949a17250dacf61394, type: 3}
+  Success_H2: {fileID: 0}
+  Success_CH4: {fileID: 0}
+  Success_NaCl: {fileID: 0}
+  Success_H2O: {fileID: 0}
 --- !u!114 &1579532902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7696,6 +7712,10 @@ MonoBehaviour:
   CH4_Anim: {fileID: 3643694464657848675, guid: 6de92c10d6c9da4459c05f5596e9acdb, type: 3}
   NaCl_Anim: {fileID: 1256221289333549246, guid: 9e882904c31835d49a8d65dd876b54f7, type: 3}
   H2O_Anim: {fileID: 2254426742256141430, guid: 93f37f8b06955024c9eef371ee124358, type: 3}
+  Success_H2: {fileID: 0}
+  Success_CH4: {fileID: 0}
+  Success_NaCl: {fileID: 0}
+  Success_H2O: {fileID: 0}
 --- !u!114 &1887407829
 MonoBehaviour:
   m_ObjectHideFlags: 0

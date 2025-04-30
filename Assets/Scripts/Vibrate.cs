@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Oculus.Haptics;
 
-
-public class Hover : MonoBehaviour
+public class Vibrate : MonoBehaviour
 {
     public float duration;
     public float amplitude;
     public float frequency;
 
-    public void Trigger()
+    public void Trigger(OVRInput.Controller controller)
     {
-        OVRInput.SetControllerVibration(frequency, amplitude);
+        OVRInput.SetControllerVibration(frequency, amplitude, controller);
 
-        
+        StartCoroutine(Routine(controller));
     }
 
     public IEnumerator Routine(OVRInput.Controller controller)
@@ -23,6 +21,5 @@ public class Hover : MonoBehaviour
         yield return new WaitForSeconds(duration);
         OVRInput.SetControllerVibration(0, 0, controller);
     }
-
 
 }

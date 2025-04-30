@@ -20,7 +20,11 @@ public class success : MonoBehaviour
     public GameObject CH4_Anim;
     public GameObject NaCl_Anim;
     public GameObject H2O_Anim;
-    
+    public GameObject Success_H2;
+    public GameObject Success_CH4;
+    public GameObject Success_NaCl;
+    public GameObject Success_H2O;
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -151,6 +155,8 @@ public class success : MonoBehaviour
             }
 
             Instantiate(CH4_Anim);
+            Success_NaCl.SetActive(true);
+            Invoke("deactivate", 3);
         }
 
         else if (bond == "NaCl")
@@ -193,6 +199,7 @@ public class success : MonoBehaviour
             }
 
             Instantiate(H2O_Anim);
+
         }
 
     }
@@ -207,5 +214,13 @@ public class success : MonoBehaviour
         {
             Destroy(bond);
         }
+    }
+
+    void deactivate()
+    {
+        Success_H2.SetActive(false);
+        Success_CH4.SetActive(false);
+        Success_NaCl.SetActive(false);
+        Success_H2O.SetActive(false);
     }
 }
