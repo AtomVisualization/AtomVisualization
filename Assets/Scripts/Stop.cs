@@ -10,18 +10,21 @@ public class Stop : MonoBehaviour
     private bool isActive = true;
 public void Halt()
     {
+        ConstantRotation rotational = GetComponent<ConstantRotation>();
 
         GameObject[] electrons = GameObject.FindGameObjectsWithTag("new");
-        if (isActive == true)
         foreach (GameObject electron in electrons)
         {
-           foreach (var comp in electron.GetComponents<ConstantRotation>()) 
-           {
-            if (comp.isActiveAndEnabled) 
+          if (electron.GetComponent<ConstantRotation>().enabled == true)
             {
-               
+                electron.GetComponent<ConstantRotation>().enabled = false;
+
+
             }
-                }
+          else
+            {
+                electron.GetComponent<ConstantRotation>().enabled = true;
+            }
            }
            
     }

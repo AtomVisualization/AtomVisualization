@@ -24,6 +24,7 @@ public class success : MonoBehaviour
     public GameObject Success_CH4;
     public GameObject Success_NaCl;
     public GameObject Success_H2O;
+    public AudioSource success_sound;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -56,6 +57,7 @@ public class success : MonoBehaviour
                 Invoke("confirm", 1);
                 check1 = false;
                 check2 = false;
+                success_sound.Play();
             }
         }
 
@@ -74,6 +76,7 @@ public class success : MonoBehaviour
                 check3 = false;
                 check4 = false;
                 check5 = false;
+                success_sound.Play();
             }
         }
         else if (bond == "NaCl")
@@ -88,6 +91,7 @@ public class success : MonoBehaviour
                 Invoke("confirm", 1);
                 check1 = false;
                 checkCL = false;
+                success_sound.Play();
             }
         }
 
@@ -104,6 +108,7 @@ public class success : MonoBehaviour
                 check2 = false;
                 checkH1 = false;
                 checkH2 = false;
+                success_sound.Play();
             }
         }
     }
@@ -134,6 +139,8 @@ public class success : MonoBehaviour
             }
 
             Instantiate(H2_Anim);
+            Success_H2.SetActive(true);
+            Invoke("deactivate", 3);
         }
         else if (bond == "CH4")
         {
@@ -155,7 +162,7 @@ public class success : MonoBehaviour
             }
 
             Instantiate(CH4_Anim);
-            Success_NaCl.SetActive(true);
+            Success_CH4.SetActive(true);
             Invoke("deactivate", 3);
         }
 
@@ -178,6 +185,8 @@ public class success : MonoBehaviour
             }
 
             Instantiate(NaCl_Anim);
+            Success_NaCl.SetActive(true);
+            Invoke("deactivate", 3);
         }
 
     else if (bond == "H2O")
@@ -199,7 +208,8 @@ public class success : MonoBehaviour
             }
 
             Instantiate(H2O_Anim);
-
+            Success_H2O.SetActive(true);
+            Invoke("deactivate", 3);
         }
 
     }
