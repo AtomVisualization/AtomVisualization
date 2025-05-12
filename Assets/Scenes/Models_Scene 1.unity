@@ -5023,7 +5023,7 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1634618942}
+      - m_Target: {fileID: 1046584333}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -7622,7 +7622,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 78
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
