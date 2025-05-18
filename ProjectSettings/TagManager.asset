@@ -17,6 +17,8 @@ TagManager:
   - bond
   - new
   - Rings
+  - H2O
+  - water
   layers:
   - Default
   - TransparentFX
