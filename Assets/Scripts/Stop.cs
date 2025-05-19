@@ -7,25 +7,26 @@ using UnityEngine;
 
 public class Stop : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private bool isActive = true;
 public void Halt()
     {
+        ConstantRotation rotational = GetComponent<ConstantRotation>();
 
         GameObject[] electrons = GameObject.FindGameObjectsWithTag("new");
         foreach (GameObject electron in electrons)
         {
-            if (electron.GetComponent<ConstantRotation>().enabled == true)
-            { 
+          if (electron.GetComponent<ConstantRotation>().enabled == true)
+            {
                 electron.GetComponent<ConstantRotation>().enabled = false;
-                
-            }
-           
 
-            else
+
+            }
+          else
             {
                 electron.GetComponent<ConstantRotation>().enabled = true;
-
             }
-        }
+           }
+           
     }
 }
+
