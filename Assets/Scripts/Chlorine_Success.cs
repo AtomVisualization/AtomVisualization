@@ -1,15 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
-using Oculus.Interaction.Demo;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Sodium_Success : MonoBehaviour
+public class Chlorine_Success : MonoBehaviour
 {
-    private float count;
+ private float count;
 
-    public GameObject Sodium;
+    public GameObject Chlorine;
 
    
     private Vector3 pos;
@@ -41,13 +38,13 @@ public class Sodium_Success : MonoBehaviour
         float waitTime1 = .5f;
         float elapsedTime2 = 0f;
         float waitTime2 = .5f;
-        currentpos1 = Sodium.transform.position;
+        currentpos1 = Chlorine.transform.position;
         pos = new Vector3(transform.position.x, transform.position.y - .1f, transform.position.z - .2f);
         GameObject[] waters = GameObject.FindGameObjectsWithTag("water");
 
         while (elapsedTime1 < waitTime1)
         {
-            Sodium.transform.position = Vector3.Lerp(currentpos1, pos, (elapsedTime1 / waitTime1));
+            Chlorine.transform.position = Vector3.Lerp(currentpos1, pos, (elapsedTime1 / waitTime1));
             elapsedTime1 += Time.deltaTime;
             Invoke("del2", 1);
 
@@ -81,7 +78,7 @@ public class Sodium_Success : MonoBehaviour
 
     void del2()
     {
-        Destroy(Sodium);
+        Destroy(Chlorine);
     }
 }
 
