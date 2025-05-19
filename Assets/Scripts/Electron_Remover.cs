@@ -17,7 +17,6 @@ public class Electron_Remover : MonoBehaviour
             Debug.Log("Electron entered the trigger zone!");
             // deletes them when they enter the trash area 
 
-            thingy.Play();
             Destroy(other.gameObject);
 
             

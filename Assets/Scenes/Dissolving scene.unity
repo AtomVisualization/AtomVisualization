@@ -3723,7 +3723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5301538481462585643, guid: 160839702825c1f4184f0142bd25a1c5, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5511466394271031513, guid: 160839702825c1f4184f0142bd25a1c5, type: 3}
       propertyPath: m_LocalScale.x
@@ -3759,7 +3759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9181635997502965923, guid: 160839702825c1f4184f0142bd25a1c5, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
