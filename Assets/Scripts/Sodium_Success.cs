@@ -4,21 +4,22 @@ using System.Data;
 using Oculus.Interaction.Demo;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.TextCore.LowLevel;
 
 public class Sodium_Success : MonoBehaviour
 {
     private float count;
-
-    public GameObject Sodium;
-
-
-    private Vector3 pos;
-    private Vector3 currentpos1;
-    private Vector3 currentpos2;
+    public float timeTakenDuringLerp = 1f;
+    public float distanceToMove = 1;
+    private Vector3 _startPosition;
+    private Vector3 _endPosition;
+    private float _timeStartedLerping;
+    private bool _islerping;
+    private bool done = false;
 
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Invoke("check2", 1);
     }
@@ -29,75 +30,56 @@ public class Sodium_Success : MonoBehaviour
 
         if (count >= 6)
         {
-            StartCoroutine(LerpValue(0, 1));
+            StartLerping();
         }
     }
 
 
-    IEnumerator LerpValue(float start, float end)
+    void StartLerping()
     {
-
-        float elapsedTime1 = 0f;
-        float waitTime1 = 2f;
-        float elapsedTime2 = 0f;
-        float waitTime2 = 2f;
-        currentpos1 = Sodium.transform.position;
-        pos = new Vector3(transform.position.x, transform.position.y - .1f, transform.position.z - .2f);
-        GameObject[] waters = GameObject.FindGameObjectsWithTag("water");
-
-        while (elapsedTime1 < waitTime1)
+        if (done == false)
         {
-            Sodium.transform.position = Vector3.Lerp(currentpos1, pos, (elapsedTime1 / waitTime1));
-            elapsedTime1 += Time.deltaTime;
+            _islerping = true;
+            _timeStartedLerping = Time.time;
 
-            foreach (GameObject water in waters)
+            _startPosition = transform.position;
+            _endPosition = transform.position + new Vector3(0, -.15f, -.25f);
+            done = true;
+            if (this.tag == "water" || this.tag == "Sodium")
             {
-                currentpos2 = water.transform.position;
-                water.transform.position = Vector3.Lerp(currentpos2, pos, (elapsedTime2 / waitTime2));
-                elapsedTime2 += Time.deltaTime;
-
-
-                yield return null;
+               Invoke("del", 1.2f); 
             }
-            Invoke("del2", 1);
-
-            yield return null;
         }
-        while (elapsedTime2 < waitTime2)
-        {
-            foreach (GameObject water in waters)
-            {
-                currentpos2 = water.transform.position;
-                water.transform.position = Vector3.Lerp(currentpos2, pos, (elapsedTime2 / waitTime2));
-                elapsedTime2 += Time.deltaTime;
-                Invoke("del1", 1);
+    }
 
-                yield return null;
+    void FixedUpdate()
+    {
+        if (this.tag == "water" || this.tag == "Sodium")
+        {
+            if (_islerping)
+            {
+                float timeSinceStarted = Time.time - _timeStartedLerping;
+                float percentageComplete = timeSinceStarted / timeTakenDuringLerp;
+                transform.position = Vector3.Lerp(_startPosition, _endPosition, percentageComplete);
+                if (percentageComplete >= 1.0f)
+                {
+                    _islerping = false;
+                }
             }
 
-
         }
+
 
     }
 
-    void del1()
+    void del()
     {
-        GameObject[] waters = GameObject.FindGameObjectsWithTag("water");
-        foreach (GameObject water in waters)
-        {
-            Destroy(water);
-        }
-
+        Destroy(gameObject);
     }
 
-    void del2()
-    {
-        Destroy(Sodium);
-        GameObject[] waters = GameObject.FindGameObjectsWithTag("water");
-        foreach (GameObject water in waters)
-        {
-            Destroy(water);
-        }
+            
     }
-}
+
+    
+
 

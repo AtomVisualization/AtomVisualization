@@ -4,81 +4,82 @@ using UnityEngine;
 
 public class Chlorine_Success : MonoBehaviour
 {
- private float count;
 
-    public GameObject Chlorine;
-
-   
-    private Vector3 pos;
-    private Vector3 currentpos1;
-    private Vector3 currentpos2;
+    private float count;
+    public float timeTakenDuringLerp = 1f;
+    public float distanceToMove = 1;
+    private Vector3 _startPosition;
+    private Vector3 _endPosition;
+    private float _timeStartedLerping;
+    private bool _islerping;
+    private bool done = false;
 
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Invoke("check2", 1);
     }
 
     void check2()
     {
-        count = detection.count;
+        count = Detection2.count;
 
-        if (count >= 6)
+        if (count >= 3)
         {
-            StartCoroutine(LerpValue(0, 1));
+            StartLerping();
         }
     }
 
 
-    IEnumerator LerpValue(float start, float end)
+    void StartLerping()
     {
-
-        float elapsedTime1 = 0f;
-        float waitTime1 = .5f;
-        float elapsedTime2 = 0f;
-        float waitTime2 = .5f;
-        currentpos1 = Chlorine.transform.position;
-        pos = new Vector3(transform.position.x, transform.position.y - .1f, transform.position.z - .2f);
-        GameObject[] waters = GameObject.FindGameObjectsWithTag("water");
-
-        while (elapsedTime1 < waitTime1)
+        if (done == false)
         {
-            Chlorine.transform.position = Vector3.Lerp(currentpos1, pos, (elapsedTime1 / waitTime1));
-            elapsedTime1 += Time.deltaTime;
-            Invoke("del2", 1);
+            _islerping = true;
+            _timeStartedLerping = Time.time;
 
-            yield return null;
-        }
-        while (elapsedTime2 < waitTime2)
-        {
-            foreach (GameObject water in waters)
+            _startPosition = transform.position;
+            _endPosition = transform.position + new Vector3(0, -.15f, -.25f);
+            done = true;
+            if (this.tag == "water" || this.tag == "Chlorine")
             {
-                currentpos2 = water.transform.position;
-                water.transform.position = Vector3.Lerp(currentpos2, pos, (elapsedTime2 / waitTime2));
-                elapsedTime2 += Time.deltaTime;
-
-                yield return null;
+                Invoke("del", 1.2f);
             }
-            Invoke("del1", 1);
-
+           
         }
-
     }
 
-    void del1()
+    void FixedUpdate()
     {
-        GameObject[] waters = GameObject.FindGameObjectsWithTag("water");
-        foreach (GameObject water in waters)
+        if (this.tag == "water" || this.tag == "Chlorine")
         {
-            Destroy(water);
+            if (_islerping)
+            {
+                float timeSinceStarted = Time.time - _timeStartedLerping;
+                float percentageComplete = timeSinceStarted / timeTakenDuringLerp;
+                transform.position = Vector3.Lerp(_startPosition, _endPosition, percentageComplete);
+                if (percentageComplete >= 1.0f)
+                {
+                    _islerping = false;
+                }
+            }
+
         }
 
+
     }
 
-    void del2()
+    void del()
     {
-        Destroy(Chlorine);
+        Destroy(gameObject);
     }
-}
+
+            
+    }
+
+    
+
+
+
 

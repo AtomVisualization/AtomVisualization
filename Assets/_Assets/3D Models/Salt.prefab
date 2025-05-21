@@ -233,6 +233,10 @@ PrefabInstance:
       propertyPath: _pointableElement
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7038514745221520286, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
+      propertyPath: _pointableElement
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7228065777240749094, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
       propertyPath: _pointable
       value: 
@@ -346,13 +350,35 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 5653638272982299628, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8474525891641412390, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1111099947059859786}
   m_SourcePrefab: {fileID: 100100000, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
 --- !u!4 &5175990822382774653 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9137874882838876572, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
   m_PrefabInstance: {fileID: 4108568121095092449}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5521132313003357127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8474525891641412390, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
+  m_PrefabInstance: {fileID: 4108568121095092449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1111099947059859786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5521132313003357127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9763cc843b8316b47bc2bd8b49e81da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeTakenDuringLerp: 1
+  distanceToMove: 1
 --- !u!1001 &6609892666928210740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -421,6 +447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chlorine
       objectReference: {fileID: 0}
+    - target: {fileID: 5939281077502081483, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
+      propertyPath: _pointableElement
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7163104987388311503, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
       propertyPath: _pointable
       value: 
@@ -436,8 +466,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 89068180750913539, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
       insertIndex: 2
       addedObject: {fileID: 7985523381005483181}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5210664556924422128, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6451720600951350882}
   m_SourcePrefab: {fileID: 100100000, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
+--- !u!1 &1438039793501332676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5210664556924422128, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
+  m_PrefabInstance: {fileID: 6609892666928210740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6451720600951350882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438039793501332676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba961e63c6ac0d458ba6f608d305a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeTakenDuringLerp: 1
+  distanceToMove: 1
 --- !u!4 &1783180528207642238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4829036799433284938, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
