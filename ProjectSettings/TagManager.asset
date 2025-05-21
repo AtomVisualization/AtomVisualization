@@ -19,6 +19,7 @@ TagManager:
   - Rings
   - H2O
   - water
+  - salt
   layers:
   - Default
   - TransparentFX

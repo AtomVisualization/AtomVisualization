@@ -26,9 +26,9 @@ public class Sodium_Success : MonoBehaviour
 
     void check2()
     {
-        count = detection.count;
+        count = Detection2.count;
 
-        if (count >= 6)
+        if (count >= 3)
         {
             StartLerping();
         }
@@ -47,7 +47,8 @@ public class Sodium_Success : MonoBehaviour
             done = true;
             if (this.tag == "water" || this.tag == "Sodium")
             {
-               Invoke("del", 1.2f); 
+            
+               Invoke("del", 1.5f); 
             }
         }
     }

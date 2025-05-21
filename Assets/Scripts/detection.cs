@@ -13,7 +13,7 @@ public class detection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Sodium"))
+        if (other.CompareTag("Chlorine"))
         {
             this.transform.parent.tag = newTag;
             count = count + 1;
@@ -22,7 +22,7 @@ public class detection : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Sodium"))
+        if (other.CompareTag("Chlorine"))
         {
             this.transform.parent.tag = oldTag;
             count = count - 1;

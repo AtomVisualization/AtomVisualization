@@ -23,11 +23,13 @@ public class Chlorine_Success : MonoBehaviour
 
     void check2()
     {
-        count = Detection2.count;
+        count = detection.count;
 
-        if (count >= 3)
+        if (count >= 6)
         {
+            count = 0;
             StartLerping();
+
         }
     }
 
@@ -44,7 +46,9 @@ public class Chlorine_Success : MonoBehaviour
             done = true;
             if (this.tag == "water" || this.tag == "Chlorine")
             {
-                Invoke("del", 1.2f);
+             
+                Invoke("del", 1.5f);
+                
             }
            
         }
