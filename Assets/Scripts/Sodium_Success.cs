@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using Oculus.Interaction;
 using Oculus.Interaction.Demo;
+using Oculus.Interaction.HandGrab;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.TextCore.LowLevel;
@@ -9,17 +11,13 @@ using UnityEngine.TextCore.LowLevel;
 public class Sodium_Success : MonoBehaviour
 {
     private float count;
-    public float timeTakenDuringLerp = 1f;
-    public float distanceToMove = 1;
-    private Vector3 _startPosition;
-    private Vector3 _endPosition;
-    private float _timeStartedLerping;
-    private bool _islerping;
-    private bool done = false;
+    public Detection2 detect;
+
+
 
 
     // Update is called once per frame
-    void Update()
+    public void stort1()
     {
         Invoke("check2", 1);
     }
@@ -30,56 +28,47 @@ public class Sodium_Success : MonoBehaviour
 
         if (count >= 3)
         {
-            StartLerping();
+            Debug.Log("Success");
+            Stort();
         }
     }
 
 
-    void StartLerping()
+    void Stort()
     {
-        if (done == false)
+        GameObject sodium = GameObject.FindGameObjectWithTag("Sodium");
+        GameObject[] waters = GameObject.FindGameObjectsWithTag("water");
+        count = Detection2.count;
+
+
+
+        foreach (GameObject water in waters)
         {
-            _islerping = true;
-            _timeStartedLerping = Time.time;
-
-            _startPosition = transform.position;
-            _endPosition = transform.position + new Vector3(0, -.15f, -.25f);
-            done = true;
-            if (this.tag == "water" || this.tag == "Sodium")
-            {
-            
-               Invoke("del", 1.5f); 
-            }
+            water.transform.SetParent(sodium.transform);
+            water.GetComponent<Grabbable>().enabled = false;
+            water.GetComponent<GrabInteractable>().enabled = false;
+            water.GetComponent<HandGrabInteractable>().enabled = false;
+            water.GetComponent<DistanceGrabInteractable>().enabled = false;
         }
-    }
-
-    void FixedUpdate()
-    {
-        if (this.tag == "water" || this.tag == "Sodium")
-        {
-            if (_islerping)
-            {
-                float timeSinceStarted = Time.time - _timeStartedLerping;
-                float percentageComplete = timeSinceStarted / timeTakenDuringLerp;
-                transform.position = Vector3.Lerp(_startPosition, _endPosition, percentageComplete);
-                if (percentageComplete >= 1.0f)
-                {
-                    _islerping = false;
-                }
-            }
-
-        }
-
-
-    }
-
-    void del()
-    {
-        Destroy(gameObject);
-    }
-
+        
             
+
+            sodium.GetComponent<Grabbable>().enabled = true;
+            sodium.GetComponent<GrabInteractable>().enabled = true;
+            sodium.GetComponent<HandGrabInteractable>().enabled = true;
+            sodium.GetComponent<DistanceGrabInteractable>().enabled = true;
+
+        detect.ResetCounter();
+
+
+
+
+
+
+
     }
+
+}
 
     
 

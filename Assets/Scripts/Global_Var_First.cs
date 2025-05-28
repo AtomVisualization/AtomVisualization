@@ -7,6 +7,7 @@ public class Global_Var_First : MonoBehaviour
     public static int elec1 = 0;
     public static int elec2 = 0;
     public static int elec3 = 0;
+ 
    
 
     public void increment() 
