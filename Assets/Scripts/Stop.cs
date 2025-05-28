@@ -7,7 +7,6 @@ using UnityEngine;
 
 public class Stop : MonoBehaviour
 {
-    private bool isActive = true;
 public void Halt()
     {
         ConstantRotation rotational = GetComponent<ConstantRotation>();

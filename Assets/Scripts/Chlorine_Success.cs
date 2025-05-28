@@ -1,3 +1,5 @@
+using Oculus.Interaction.HandGrab;
+using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,17 +8,13 @@ public class Chlorine_Success : MonoBehaviour
 {
 
     private float count;
-    public float timeTakenDuringLerp = 1f;
-    public float distanceToMove = 1;
-    private Vector3 _startPosition;
-    private Vector3 _endPosition;
-    private float _timeStartedLerping;
-    private bool _islerping;
-    private bool done = false;
+    public Detection2 detect;
+  
+   
 
 
-    // Update is called once per frame
-    void Update()
+
+    public void stort1()
     {
         Invoke("check2", 1);
     }
@@ -27,60 +25,42 @@ public class Chlorine_Success : MonoBehaviour
 
         if (count >= 6)
         {
+            Debug.Log("Success");
             count = 0;
-            StartLerping();
+            Stort();
 
         }
     }
 
 
-    void StartLerping()
+    void Stort()
     {
-        if (done == false)
+        GameObject chlorine = GameObject.FindGameObjectWithTag("Chlorine");
+
+
+        if (this.tag == "water")
         {
-            _islerping = true;
-            _timeStartedLerping = Time.time;
+            this.transform.SetParent(chlorine.transform);
+            this.GetComponent<Grabbable>().enabled = false;
+            this.GetComponent<GrabInteractable>().enabled = false;
+            this.GetComponent<HandGrabInteractable>().enabled = false;
+            this.GetComponent<DistanceGrabInteractable>().enabled = false;
 
-            _startPosition = transform.position;
-            _endPosition = transform.position + new Vector3(0, -.15f, -.25f);
-            done = true;
-            if (this.tag == "water" || this.tag == "Chlorine")
-            {
-             
-                Invoke("del", 1.5f);
-                
-            }
-           
-        }
-    }
+            chlorine.GetComponent<Grabbable>().enabled = true;
+            chlorine.GetComponent<GrabInteractable>().enabled = true;
+            chlorine.GetComponent<HandGrabInteractable>().enabled = true;
+            chlorine.GetComponent<DistanceGrabInteractable>().enabled = true;
 
-    void FixedUpdate()
-    {
-        if (this.tag == "water" || this.tag == "Chlorine")
-        {
-            if (_islerping)
-            {
-                float timeSinceStarted = Time.time - _timeStartedLerping;
-                float percentageComplete = timeSinceStarted / timeTakenDuringLerp;
-                transform.position = Vector3.Lerp(_startPosition, _endPosition, percentageComplete);
-                if (percentageComplete >= 1.0f)
-                {
-                    _islerping = false;
-                }
-            }
-
+            detect.ResetCounter();
         }
 
 
-    }
 
-    void del()
-    {
-        Destroy(gameObject);
-    }
 
-            
+
+
     }
+}
 
     
 
