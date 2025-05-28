@@ -1632,7 +1632,8 @@ PrefabInstance:
       value: lab scene walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -8700617353114198275, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
@@ -1709,7 +1710,10 @@ PrefabInstance:
       value: lab scene windows2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -8700617353114198275, guid: 20cf7fddf2b792a47b93aa0d8f111327, type: 3}
+    - {fileID: 65702495048144492, guid: 20cf7fddf2b792a47b93aa0d8f111327, type: 3}
+    - {fileID: -2845779275431937956, guid: 20cf7fddf2b792a47b93aa0d8f111327, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20cf7fddf2b792a47b93aa0d8f111327, type: 3}
@@ -2588,7 +2592,9 @@ PrefabInstance:
       value: LabTable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3551022123854249000, guid: b45adeec7ddf85a4ab52adddf295841a, type: 3}
+    - {fileID: 4623903459375295867, guid: b45adeec7ddf85a4ab52adddf295841a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45adeec7ddf85a4ab52adddf295841a, type: 3}
