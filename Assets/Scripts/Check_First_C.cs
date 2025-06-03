@@ -20,6 +20,8 @@ public class Check_First_C : MonoBehaviour
     private int count = 0;
     private int count2 = 0;
 
+    public GameObject next;
+
     public GameObject fail;
     public void Check()
     {
@@ -53,6 +55,8 @@ public class Check_First_C : MonoBehaviour
                     success.SetActive(true);
 
                     Invoke("Deactivate_S", 3);
+
+
 
                 }
 

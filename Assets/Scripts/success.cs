@@ -25,6 +25,7 @@ public class success : MonoBehaviour
     public GameObject Success_NaCl;
     public GameObject Success_H2O;
     public AudioSource success_sound;
+    public GameObject next;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -58,6 +59,8 @@ public class success : MonoBehaviour
                 check1 = false;
                 check2 = false;
                 success_sound.Play();
+                next.SetActive(true);
+                
             }
         }
 

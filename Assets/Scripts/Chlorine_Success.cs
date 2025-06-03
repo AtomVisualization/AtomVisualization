@@ -23,7 +23,7 @@ public class Chlorine_Success : MonoBehaviour
     {
         count = detection.count;
 
-        if (count >= 6)
+        if (count >= 3)
         {
             Debug.Log("Success");
             count = 0;
