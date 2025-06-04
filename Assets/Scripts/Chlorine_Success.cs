@@ -22,7 +22,7 @@ public class Chlorine_Success : MonoBehaviour
 
     public void stort1()
     {
-        Invoke("check2", 1);
+        check2();
     }
 
     void check2()

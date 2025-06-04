@@ -185,11 +185,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to the final scene the dissolving sim! Here, you can view how
-    salt dissolves in water. To do this you will bring three water molecules to the
-    salt, weakening the bond and letting you move the sodium or chlorine. To move
-    the sodium you put three water molecules with the oxygen facing the sodium. For
-    the chlorine you need to have the hydrogens facing '
+  m_text: Welcome to the final scene the dissolving sim! Here, you can view how salt
+    dissolves in water. To do this you will bring three water molecules to the salt,
+    weakening the bond and letting you move the sodium or chlorine. To move the sodium
+    you put three water molecules with the oxygen facing the sodium. For the chlorine
+    you need to have the hydrogens facing the atom. Try it!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1850,7 +1850,6 @@ GameObject:
   - component: {fileID: 1411374869}
   - component: {fileID: 1411374868}
   - component: {fileID: 1411374867}
-  - component: {fileID: 1411374871}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1948,18 +1947,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1411374871}
-        m_TargetAssemblyTypeName: Detection2, Assembly-CSharp
-        m_MethodName: ResetCOunter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1411374869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1998,20 +1985,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411374865}
   m_CullTransparentMesh: 1
---- !u!114 &1411374871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411374865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba2b9fae81fefc540b103ef25c6fba39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newTag: water
-  oldTag: H2O
 --- !u!1 &1510760430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3154,6 +3127,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1604901375535093794, guid: 160839702825c1f4184f0142bd25a1c5, type: 3}
+    - {fileID: 5551617491316421261, guid: 160839702825c1f4184f0142bd25a1c5, type: 3}
+    - {fileID: 1804475733549668136, guid: 160839702825c1f4184f0142bd25a1c5, type: 3}
     m_RemovedGameObjects:
     - {fileID: 821761201457340456, guid: 160839702825c1f4184f0142bd25a1c5, type: 3}
     - {fileID: 8591125417988902348, guid: 160839702825c1f4184f0142bd25a1c5, type: 3}
@@ -3241,7 +3216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5521132313003357127, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6598986013386963577, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
       propertyPath: m_LocalPosition.x

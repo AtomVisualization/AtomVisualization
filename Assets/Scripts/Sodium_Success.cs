@@ -19,7 +19,7 @@ public class Sodium_Success : MonoBehaviour
     // Update is called once per frame
     public void stort1()
     {
-        Invoke("check2", 1);
+        check2();
     }
 
     void check2()

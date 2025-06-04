@@ -259,8 +259,6 @@ GameObject:
   - component: {fileID: 6384847045316306310}
   - component: {fileID: -6647869360445244249}
   - component: {fileID: 8453652310928616829}
-  - component: {fileID: 1804475733549668136}
-  - component: {fileID: 5551617491316421261}
   m_Layer: 0
   m_Name: Water
   m_TagString: H2O
@@ -554,30 +552,6 @@ MonoBehaviour:
   _whenCancel:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1804475733549668136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896161222682344511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9763cc843b8316b47bc2bd8b49e81da6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5551617491316421261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896161222682344511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aba961e63c6ac0d458ba6f608d305a1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1861941638949043069
 PrefabInstance:
   m_ObjectHideFlags: 0
