@@ -17,24 +17,25 @@ public class Sodium_Success : MonoBehaviour
 
 
     // Update is called once per frame
-    public void stort1()
+    public void stort1(GameObject Sod)
     {
-        check2();
+        check2(Sod);
     }
 
-    void check2()
+    void check2(GameObject Sod)
     {
         count = Detection2.count;
 
         if (count >= 3)
         {
             Debug.Log("Success");
-            Stort();
+            Detection2.count = 0;
+            Stort(Sod);
         }
     }
 
 
-    void Stort()
+    void Stort(GameObject Sod)
     {
         Debug.Log("stort");
         GameObject sodium = GameObject.FindGameObjectWithTag("Sodium");
@@ -45,20 +46,20 @@ public class Sodium_Success : MonoBehaviour
 
         foreach (GameObject water in waters)
         {
-            water.transform.SetParent(sodium.transform);
+            water.transform.SetParent(Sod.transform);
             water.GetComponent<Grabbable>().enabled = false;
             water.GetComponent<GrabInteractable>().enabled = false;
             water.GetComponent<HandGrabInteractable>().enabled = false;
-            water.GetComponent<DistanceGrabInteractable>().enabled = false;
+            water.GetComponentInChildren<SphereCollider>().enabled = false;
             water.transform.tag = "water2";
         }
         
             
 
-            sodium.GetComponent<Grabbable>().enabled = true;
-            sodium.GetComponent<GrabInteractable>().enabled = true;
-            sodium.GetComponent<HandGrabInteractable>().enabled = true;
-            sodium.GetComponent<DistanceGrabInteractable>().enabled = true;
+            Sod.GetComponent<Grabbable>().enabled = true;
+            Sod.GetComponent<GrabInteractable>().enabled = true;
+            Sod.GetComponent<HandGrabInteractable>().enabled = true;
+            
 
 
         Debug.Log("Sodium " + count);

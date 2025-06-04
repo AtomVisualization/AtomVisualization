@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 3167740366481037872}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.03366849, z: -0, w: 0.9994331}
-  m_LocalPosition: {x: 0.021, y: -0.376, z: 0.368}
-  m_LocalScale: {x: 0.63461584, y: 0.5275109, z: 0.5259705}
+  m_LocalPosition: {x: 0.021, y: -0.09, z: 0.368}
+  m_LocalScale: {x: 0.34854373, y: 0.28971955, z: 0.28887355}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4674832233124372674}
@@ -149,8 +149,8 @@ Transform:
   m_GameObject: {fileID: 5648569090644941809}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.33175844, z: -0, w: 0.94336444}
-  m_LocalPosition: {x: 0.022536295, y: 0.65, z: 0.3831693}
-  m_LocalScale: {x: 0.5580545, y: 0.7775166, z: 0.62035716}
+  m_LocalPosition: {x: 0.022536295, y: 0.509, z: 0.3831693}
+  m_LocalScale: {x: 0.38541475, y: 0.536984, z: 0.42844346}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4674832233124372674}
@@ -256,7 +256,6 @@ GameObject:
   - component: {fileID: 398769701525823683}
   - component: {fileID: 7657962743230597977}
   - component: {fileID: 6165534387986724373}
-  - component: {fileID: 6384847045316306310}
   - component: {fileID: -6647869360445244249}
   - component: {fileID: 8453652310928616829}
   m_Layer: 0
@@ -470,28 +469,6 @@ MonoBehaviour:
   _movementProvider: {fileID: 0}
   _handAligment: 1
   _handGrabPoses: []
---- !u!114 &6384847045316306310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896161222682344511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07525681efbca7a4e9643ab3a592ada7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactorFilters: []
-  _maxInteractors: -1
-  _maxSelectingInteractors: -1
-  _data: {fileID: 0}
-  _pointableElement: {fileID: 398769701525823683}
-  _rigidbody: {fileID: 6012275755477693655}
-  _grabSource: {fileID: 0}
-  _resetGrabOnGrabsUpdated: 1
-  _physicsGrabbable: {fileID: 0}
-  _movementProvider: {fileID: 0}
 --- !u!114 &-6647869360445244249
 MonoBehaviour:
   m_ObjectHideFlags: 0

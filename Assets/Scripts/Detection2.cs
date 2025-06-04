@@ -7,10 +7,11 @@ public class Detection2 : MonoBehaviour
     public static float count = 0;
     public string newTag = "water";
     public string oldTag = "H2O";
+    private bool debounce = false;
   
 
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
     
         if (other.CompareTag("Sodium") || other.CompareTag("salt"))
@@ -19,14 +20,12 @@ public class Detection2 : MonoBehaviour
             count = count + 1;
             Debug.Log(count);
 
-            if (count >= 4)
-            {
-                count = 0;
-            }
-            
-            other.GetComponent<Sodium_Success>().stort1();
+            debounce = true;
 
-           
+
+            other.GetComponent<Sodium_Success>().stort1(other.GetComponentInParent<Transform>().gameObject);
+
+            Invoke("ResetCounter", 0.5f);
             
 
         }
@@ -42,7 +41,7 @@ public class Detection2 : MonoBehaviour
 
     public void ResetCounter()
     {
-        count = 0;
+        debounce = false;
     }
 
 }
