@@ -2012,38 +2012,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newTag: water
   oldTag: H2O
---- !u!1 &1481836336 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1438039793501332676, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
-  m_PrefabInstance: {fileID: 6245994009416359533}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1481836342 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 4956416521178262657, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
-  m_PrefabInstance: {fileID: 6245994009416359533}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1481836345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481836336}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
-  _rigidbody: {fileID: 1481836342}
-  _kinematicWhileSelected: 1
-  _throwWhenUnselected: 1
 --- !u!1 &1510760430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3184,7 +3152,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1604901375535093794, guid: 160839702825c1f4184f0142bd25a1c5, type: 3}
     m_RemovedGameObjects:
     - {fileID: 821761201457340456, guid: 160839702825c1f4184f0142bd25a1c5, type: 3}
     - {fileID: 8591125417988902348, guid: 160839702825c1f4184f0142bd25a1c5, type: 3}
@@ -3270,6 +3239,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -93
       objectReference: {fileID: 0}
+    - target: {fileID: 5521132313003357127, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6598986013386963577, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.278
@@ -3318,7 +3291,12 @@ PrefabInstance:
       propertyPath: _pointableElement
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7451858063908104282, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7444103344628202360, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
     m_RemovedGameObjects:
     - {fileID: 4281601399637181496, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
     - {fileID: 6532850552199910422, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
@@ -3327,10 +3305,7 @@ PrefabInstance:
     - {fileID: 8958447791170375791, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
     - {fileID: 4485209084487016035, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1438039793501332676, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1481836345}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cdee60bdd4d73742b44a34e16b3fdbe, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
