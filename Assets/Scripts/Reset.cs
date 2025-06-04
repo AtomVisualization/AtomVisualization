@@ -7,6 +7,7 @@ using UnityEngine;
 public class Reset : MonoBehaviour
 {
     public GameObject salt;
+    public GameObject water;
 
     private float count1;
     private float count2;
@@ -22,6 +23,8 @@ public class Reset : MonoBehaviour
         already = false;
         GameObject[] waters = GameObject.FindGameObjectsWithTag("water");
         GameObject[] salts = GameObject.FindGameObjectsWithTag("salt");
+        GameObject[] waters2 = GameObject.FindGameObjectsWithTag("H2O");
+        GameObject[] waters3 = GameObject.FindGameObjectsWithTag("water2");
 
         foreach (GameObject salt in salts)
         {
@@ -32,8 +35,19 @@ public class Reset : MonoBehaviour
         {
             Destroy(water);
         }
+
+        foreach (GameObject H2 in waters2)
+        {
+            Destroy(H2);
+        }
+
+         foreach (GameObject water in waters3)
+        {
+            Destroy(water);
+        }
    
         Instantiate(salt);
+        Instantiate(water);
 
         GameObject Sodium = GameObject.FindGameObjectWithTag("Sodium");
         GameObject chlorine = GameObject.FindGameObjectWithTag("Chlorine");

@@ -259,6 +259,7 @@ PrefabInstance:
     - {fileID: 7228065777240749094, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
     - {fileID: -5361370691743853929, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
     - {fileID: 7214903831714849369, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
+    - {fileID: -8053456040579663251, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5653638272982299628, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
     - {fileID: 6075588052342969600, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
@@ -339,9 +340,17 @@ PrefabInstance:
       propertyPath: _pointableElement
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 477199580022739644, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1783034936335362047, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
       propertyPath: m_Radius
       value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249463773522154481, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4829036799433284938, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
       propertyPath: m_LocalScale.x
@@ -400,6 +409,10 @@ PrefabInstance:
       value: Chlorine
       objectReference: {fileID: 0}
     - target: {fileID: 5939281077502081483, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939281077502081483, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
       propertyPath: _pointableElement
       value: 
       objectReference: {fileID: 0}
@@ -407,13 +420,15 @@ PrefabInstance:
       propertyPath: _pointable
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8741856647720754172, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 3249463773522154481, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
-    - {fileID: 477199580022739644, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
-    - {fileID: 8741856647720754172, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
     - {fileID: 7163104987388311503, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
     - {fileID: -3212654003330146357, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
     - {fileID: 1783034936335362047, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
+    - {fileID: -4830732025341454260, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6976150132719331084, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
     - {fileID: 77219435674351394, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
@@ -459,7 +474,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

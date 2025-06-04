@@ -1,14 +1,20 @@
-using Oculus.Interaction.HandGrab;
-using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using Oculus.Interaction;
+using Oculus.Interaction.Demo;
+using Oculus.Interaction.HandGrab;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.TextCore.LowLevel;
+
 
 public class Chlorine_Success : MonoBehaviour
 {
 
     private float count;
-    public Detection2 detect;
+    private detection detect;
+   
   
    
 
@@ -26,37 +32,40 @@ public class Chlorine_Success : MonoBehaviour
         if (count >= 3)
         {
             Debug.Log("Success");
-            count = 0;
+        
             Stort();
 
         }
     }
 
 
-    void Stort()
+        void Stort()
     {
         GameObject chlorine = GameObject.FindGameObjectWithTag("Chlorine");
+        GameObject[] waters = GameObject.FindGameObjectsWithTag("water");
+        count = detection.count;
 
 
-        if (this.tag == "water")
+
+        foreach (GameObject water in waters)
         {
-            this.transform.SetParent(chlorine.transform);
-            this.GetComponent<Grabbable>().enabled = false;
-            this.GetComponent<GrabInteractable>().enabled = false;
-            this.GetComponent<HandGrabInteractable>().enabled = false;
-            this.GetComponent<DistanceGrabInteractable>().enabled = false;
+            water.transform.SetParent(chlorine.transform);
+            water.GetComponent<Grabbable>().enabled = false;
+            water.GetComponent<GrabInteractable>().enabled = false;
+            water.GetComponent<HandGrabInteractable>().enabled = false;
+            water.GetComponent<DistanceGrabInteractable>().enabled = false;
+             water.transform.tag = "water2";
+        }
+        
+            
 
-            chlorine.GetComponent<Grabbable>().enabled = true;
+           chlorine.GetComponent<Grabbable>().enabled = true;
             chlorine.GetComponent<GrabInteractable>().enabled = true;
             chlorine.GetComponent<HandGrabInteractable>().enabled = true;
             chlorine.GetComponent<DistanceGrabInteractable>().enabled = true;
 
-            detect.ResetCounter();
-        }
 
-
-
-
+        Debug.Log("Chlorine " + count);
 
 
     }
