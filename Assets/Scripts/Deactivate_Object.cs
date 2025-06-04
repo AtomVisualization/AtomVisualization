@@ -13,6 +13,8 @@ public class Deactivate_Object : MonoBehaviour
     public GameObject original5;
     public GameObject original6;
     public GameObject original7;
+    public GameObject ion;
+    public GameObject chart;
 
 
     public void Deactivate()
@@ -60,6 +62,9 @@ public class Deactivate_Object : MonoBehaviour
         {
             Destroy(oxygen);
         }
+
+        ion.SetActive(false);
+        chart.SetActive(false);
         // Instantiates the original molecules
         Instantiate(original1);
         Instantiate(original2);

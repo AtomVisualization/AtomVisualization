@@ -26,6 +26,8 @@ public class success : MonoBehaviour
     public GameObject Success_H2O;
     public AudioSource success_sound;
     public GameObject next;
+    public GameObject Notation;
+    public GameObject Chart;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -143,6 +145,8 @@ public class success : MonoBehaviour
 
             Instantiate(H2_Anim);
             Success_H2.SetActive(true);
+            Notation.SetActive(true);
+            Chart.SetActive(true);
             Invoke("deactivate", 3);
         }
         else if (bond == "CH4")
@@ -166,6 +170,8 @@ public class success : MonoBehaviour
 
             Instantiate(CH4_Anim);
             Success_CH4.SetActive(true);
+            Notation.SetActive(true);
+            Chart.SetActive(true);
             Invoke("deactivate", 3);
         }
 
@@ -189,6 +195,8 @@ public class success : MonoBehaviour
 
             Instantiate(NaCl_Anim);
             Success_NaCl.SetActive(true);
+            Notation.SetActive(true);
+            Chart.SetActive(true);
             Invoke("deactivate", 3);
         }
 
@@ -212,8 +220,13 @@ public class success : MonoBehaviour
 
             Instantiate(H2O_Anim);
             Success_H2O.SetActive(true);
+            Notation.SetActive(true);
+            Chart.SetActive(true);
             Invoke("deactivate", 3);
+
+
         }
+
 
     }
 

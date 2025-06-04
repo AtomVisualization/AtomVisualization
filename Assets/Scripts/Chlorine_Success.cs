@@ -14,34 +14,35 @@ public class Chlorine_Success : MonoBehaviour
 
     private float count;
     private detection detect;
+    public GameObject next;
    
   
    
 
 
 
-    public void stort1()
+    public void stort1(GameObject Chlor)
     {
-        check2();
+        check2(Chlor);
     }
 
-    void check2()
+    void check2(GameObject Chlor)
     {
         count = detection.count;
 
         if (count >= 3)
         {
             Debug.Log("Success");
+            detection.count = 0;
         
-            Stort();
+            Stort(Chlor);
 
         }
     }
 
 
-        void Stort()
+        void Stort(GameObject Chlor)
     {
-        GameObject chlorine = GameObject.FindGameObjectWithTag("Chlorine");
         GameObject[] waters = GameObject.FindGameObjectsWithTag("water");
         count = detection.count;
 
@@ -49,23 +50,24 @@ public class Chlorine_Success : MonoBehaviour
 
         foreach (GameObject water in waters)
         {
-            water.transform.SetParent(chlorine.transform);
+            water.transform.SetParent(Chlor.transform);
             water.GetComponent<Grabbable>().enabled = false;
             water.GetComponent<GrabInteractable>().enabled = false;
             water.GetComponent<HandGrabInteractable>().enabled = false;
-            water.GetComponent<DistanceGrabInteractable>().enabled = false;
+            water.GetComponentInChildren<SphereCollider>().enabled = false;
              water.transform.tag = "water2";
         }
         
             
 
-           chlorine.GetComponent<Grabbable>().enabled = true;
-            chlorine.GetComponent<GrabInteractable>().enabled = true;
-            chlorine.GetComponent<HandGrabInteractable>().enabled = true;
-            chlorine.GetComponent<DistanceGrabInteractable>().enabled = true;
+           Chlor.GetComponent<Grabbable>().enabled = true;
+            Chlor.GetComponent<GrabInteractable>().enabled = true;
+          Chlor.GetComponent<HandGrabInteractable>().enabled = true;
+         
 
 
         Debug.Log("Chlorine " + count);
+        next.SetActive(true);
 
 
     }
