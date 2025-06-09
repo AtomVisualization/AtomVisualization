@@ -21,6 +21,13 @@ TagManager:
   - water
   - salt
   - water2
+  - water2C
+  - water3
+  - Chlorine_1
+  - Chlorine_2
+  - Chlorine_3
+  - Chlorine_4
+  - Chlorine_5
   layers:
   - Default
   - TransparentFX

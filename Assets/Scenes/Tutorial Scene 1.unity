@@ -3289,10 +3289,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: welcome, This scene was made so that you can review how many electrons
-    are in each of the basic molecules. You can interact with the atoms as well by
-    grabbing them with the trigger on the side of the controller. Click the next
-    button when ready to move on once you've grabbed the object.
+  m_text: 'Welcome to the Atom Visualization tutorial! In this tutorial, you will
+    be guided through each section of the program and how it works.
+
+
+    Your are
+    in the Models Scene, where out of a selection of atoms you will find later in
+    the program, you will be able to select which one you would like to review. You
+    can interact with the atoms by grabbing them with the trigger on the side of
+    the controller.
+
+
+    Once you have grabbed the object, click the next button
+    to move on'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3319,8 +3328,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11
-  m_fontSizeBase: 11
+  m_fontSize: 7.2
+  m_fontSizeBase: 7.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11677,8 +11686,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Good job! You are now ready to move on to the electron sim! Click the next
-    button to go there!
+  m_text: Good job! You are now ready to move on to the Electron Simulation, clikc
+    the next button when you are ready!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11687,7 +11696,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

@@ -2141,10 +2141,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Welcome to the molecule sim! Here you will combine different atoms to make
-    different reactions such as H2, CH4 etc. To begin, press the H2 box to the left
-    and boxes will appear, once you put the hydrogens in the boxes then an animation
-    will play showing how the electrons in the atoms react with each other.
+  m_text: 'Welcome to the Molecule Simulation! In this  simulation, you will combine
+    different atoms to make the selected molecule. To begin press the H2 button to
+    the left and translucent boxes will appear, when the correct type of and number
+    of atoms are inserted into the boxes, an animation will play showing how the
+    electrons change their movement once a molecular bond is formed.
+
+
+    Hint:
+    H2 is made up of 2 hydrogen atoms, with each atom having only 1 electron orbiting
+    the nucleus.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2171,8 +2177,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9
-  m_fontSizeBase: 9
+  m_fontSize: 8.02
+  m_fontSizeBase: 8.02
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4106,6 +4112,8 @@ MonoBehaviour:
   next: {fileID: 1122868702}
   Notation: {fileID: 0}
   Chart: {fileID: 0}
+  dipolemoment: {fileID: 0}
+  blob: {fileID: 0}
 --- !u!4 &890599549
 Transform:
   m_ObjectHideFlags: 0
@@ -6170,6 +6178,8 @@ MonoBehaviour:
   next: {fileID: 0}
   Notation: {fileID: 0}
   Chart: {fileID: 0}
+  dipolemoment: {fileID: 0}
+  blob: {fileID: 0}
 --- !u!1 &1256844397
 GameObject:
   m_ObjectHideFlags: 0
@@ -7109,7 +7119,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7541,6 +7551,8 @@ MonoBehaviour:
   next: {fileID: 0}
   Notation: {fileID: 0}
   Chart: {fileID: 0}
+  dipolemoment: {fileID: 0}
+  blob: {fileID: 0}
 --- !u!1 &1444150142
 GameObject:
   m_ObjectHideFlags: 0
@@ -7852,8 +7864,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Good job! That's it for the molecule sim, go ahead and go to the dissolving
-    sim by pressing the next button!
+  m_text: Good job! You are now ready to move on to the Dissolving Simulation! Click
+    the next button when you are ready!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7862,7 +7874,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -8817,6 +8829,8 @@ MonoBehaviour:
   next: {fileID: 0}
   Notation: {fileID: 0}
   Chart: {fileID: 0}
+  dipolemoment: {fileID: 0}
+  blob: {fileID: 0}
 --- !u!114 &1579532902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10110,6 +10124,8 @@ MonoBehaviour:
   next: {fileID: 0}
   Notation: {fileID: 0}
   Chart: {fileID: 0}
+  dipolemoment: {fileID: 0}
+  blob: {fileID: 0}
 --- !u!114 &1887407829
 MonoBehaviour:
   m_ObjectHideFlags: 0

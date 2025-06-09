@@ -28,6 +28,8 @@ public class success : MonoBehaviour
     public GameObject next;
     public GameObject Notation;
     public GameObject Chart;
+    public GameObject dipolemoment;
+    public GameObject blob;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -62,7 +64,7 @@ public class success : MonoBehaviour
                 check2 = false;
                 success_sound.Play();
                 next.SetActive(true);
-                
+
             }
         }
 
@@ -126,7 +128,7 @@ public class success : MonoBehaviour
         GameObject[] hydrogens = GameObject.FindGameObjectsWithTag("Hydrogen");
         GameObject[] carbons = GameObject.FindGameObjectsWithTag("Carbon");
         GameObject[] sodiums = GameObject.FindGameObjectsWithTag("Sodium");
-        GameObject[] chlorines  = GameObject.FindGameObjectsWithTag("Chlorine");
+        GameObject[] chlorines = GameObject.FindGameObjectsWithTag("Chlorine");
         GameObject[] oxygens = GameObject.FindGameObjectsWithTag("Oxygen");
         GameObject[] boxes = GameObject.FindGameObjectsWithTag("boxes");
         if (bond == "H2")
@@ -145,7 +147,6 @@ public class success : MonoBehaviour
 
             Instantiate(H2_Anim);
             Success_H2.SetActive(true);
-            Notation.SetActive(true);
             Chart.SetActive(true);
             Invoke("deactivate", 3);
         }
@@ -170,7 +171,6 @@ public class success : MonoBehaviour
 
             Instantiate(CH4_Anim);
             Success_CH4.SetActive(true);
-            Notation.SetActive(true);
             Chart.SetActive(true);
             Invoke("deactivate", 3);
         }
@@ -200,7 +200,7 @@ public class success : MonoBehaviour
             Invoke("deactivate", 3);
         }
 
-    else if (bond == "H2O")
+        else if (bond == "H2O")
         {
             foreach (GameObject oxygen in oxygens)
             {
@@ -220,9 +220,10 @@ public class success : MonoBehaviour
 
             Instantiate(H2O_Anim);
             Success_H2O.SetActive(true);
-            Notation.SetActive(true);
             Chart.SetActive(true);
+            dipolemoment.SetActive(true);
             Invoke("deactivate", 3);
+            Invoke("blobs", 4);
 
 
         }
@@ -248,5 +249,10 @@ public class success : MonoBehaviour
         Success_CH4.SetActive(false);
         Success_NaCl.SetActive(false);
         Success_H2O.SetActive(false);
+    }
+
+    void blobs()
+    {
+        blob.SetActive(true);
     }
 }
