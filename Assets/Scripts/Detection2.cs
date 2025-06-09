@@ -8,14 +8,22 @@ public class Detection2 : MonoBehaviour
     public string newTag = "water";
     public string oldTag = "H2O";
     private bool debounce = false;
-  
+
 
 
     public void OnTriggerEnter(Collider other)
     {
-    
+        if (debounce == true)
+        {
+            return;
+        }
         if (other.CompareTag("Sodium") || other.CompareTag("salt"))
         {
+            if (count < 0)
+            {
+                count = 0;
+            }
+
             this.transform.parent.tag = newTag;
             count = count + 1;
             Debug.Log(count);
@@ -26,7 +34,7 @@ public class Detection2 : MonoBehaviour
             other.GetComponent<Sodium_Success>().stort1(other.GetComponentInParent<Transform>().gameObject);
 
             Invoke("ResetCounter", 0.5f);
-            
+
 
         }
     }
@@ -34,14 +42,19 @@ public class Detection2 : MonoBehaviour
     {
         if (other.CompareTag("Sodium"))
         {
-
-            count = count - 1;
+            //count = count - 1;
+            
         }
     }
 
     public void ResetCounter()
     {
         debounce = false;
+    }
+
+    public void OnReset()
+    {
+
     }
 
 }

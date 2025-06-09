@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class Reset : MonoBehaviour
 {
     public GameObject salt;
@@ -16,7 +18,7 @@ public class Reset : MonoBehaviour
     public void res()
     {
 
-        count1 = detection.count;
+
         count2 = Detection2.count;
 
 
@@ -41,11 +43,11 @@ public class Reset : MonoBehaviour
             Destroy(H2);
         }
 
-         foreach (GameObject water in waters3)
+        foreach (GameObject water in waters3)
         {
             Destroy(water);
         }
-   
+
         Instantiate(salt);
         Instantiate(water);
 

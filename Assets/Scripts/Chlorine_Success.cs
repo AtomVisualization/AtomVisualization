@@ -7,6 +7,9 @@ using Oculus.Interaction.HandGrab;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.TextCore.LowLevel;
+using System;
+
+
 
 
 public class Chlorine_Success : MonoBehaviour
@@ -17,29 +20,33 @@ public class Chlorine_Success : MonoBehaviour
     public GameObject next;
 
     public float count3;
+    public static float count4 = detection.count2;
+
+    private const string TAG_MNGR_ASSET = "ProjectSettings/TagManager.asset";
 
 
 
 
 
 
-    public void stort1(GameObject Chlor)
+    public void stort1(GameObject Chlor, float count2)
     {
 
-        check2(Chlor);
+        check2(Chlor, count2);
     }
 
-    void check2(GameObject Chlor)
+    void check2(GameObject Chlor, float count2)
     {
-        count = detection.count;
-        Debug.Log("Current count3: " + count3);
-        if (count >= 3)
+        
+        //count = detection.count;
+        if (count2 >= 3)
         {
             Debug.Log("Success");
-
-
+            //detection.count = 0;
+            count3 = 0;
+            Debug.Log(count2);
             Stort(Chlor);
-            Debug.Log(count);
+            
 
         }
     }
@@ -47,45 +54,32 @@ public class Chlorine_Success : MonoBehaviour
 
     void Stort(GameObject Chlor)
     {
-        GameObject[] waters = GameObject.FindGameObjectsWithTag("water2C");
+        GameObject[] waters = GameObject.FindGameObjectsWithTag("Chlor_" + count4);
 
 
 
         foreach (GameObject water in waters)
         {
             water.transform.SetParent(Chlor.transform);
-            water.transform.tag = "water3";
-            // Optionally delay disabling components to ensure all events fire
-
-
-
-
             water.GetComponent<Grabbable>().enabled = false;
             water.GetComponent<GrabInteractable>().enabled = false;
             water.GetComponent<HandGrabInteractable>().enabled = false;
             water.GetComponentInChildren<SphereCollider>().enabled = false;
-
+            water.transform.tag = "water3";
 
         }
 
-         Chlor.GetComponent<Grabbable>().enabled = true;
+        Chlor.GetComponent<Grabbable>().enabled = true;
         Chlor.GetComponent<GrabInteractable>().enabled = true;
         Chlor.GetComponent<HandGrabInteractable>().enabled = true;
 
-        Debug.Log("Chlorine success reset");
+
         next.SetActive(true);
+
     }
-    //stuff below was originally in Stort, but calling a new function
-    
-
-
-
-
 
 
 }
-
-
     
 
 
