@@ -20,7 +20,7 @@ public class Chlorine_Success : MonoBehaviour
     public GameObject next;
 
     public float count3;
-    public static float count4 = detection.count2;
+    
 
     private const string TAG_MNGR_ASSET = "ProjectSettings/TagManager.asset";
 
@@ -54,6 +54,7 @@ public class Chlorine_Success : MonoBehaviour
 
     void Stort(GameObject Chlor)
     {
+        float count4 = detection.count2;
         GameObject[] waters = GameObject.FindGameObjectsWithTag("Chlor_" + count4);
 
 
@@ -65,6 +66,8 @@ public class Chlorine_Success : MonoBehaviour
             water.GetComponent<GrabInteractable>().enabled = false;
             water.GetComponent<HandGrabInteractable>().enabled = false;
             water.GetComponentInChildren<SphereCollider>().enabled = false;
+            water.transform.Find("Sphere 2").GetComponent<SphereCollider>().enabled = false;
+            water.transform.Find("Sphere").GetComponent<SphereCollider>().enabled = false;
             water.transform.tag = "water3";
 
         }

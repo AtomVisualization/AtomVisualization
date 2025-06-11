@@ -18,8 +18,19 @@ public class Reset : MonoBehaviour
     public void res()
     {
 
+        detection.count3 = 0;
+        detection.count4 = 0;
+        detection.count5 = 0;
+        detection.count6 = 0;
+        detection.count7 = 0;
+        detection.count8 = 0;
+        Detection2.count3 = 0;
+        Detection2.count4 = 0;
+        Detection2.count5 = 0;
+        Detection2.count6 = 0;
+        Detection2.count7 = 0;
+        Detection2.count8 = 0;
 
-        count2 = Detection2.count;
 
 
         already = false;
@@ -27,6 +38,7 @@ public class Reset : MonoBehaviour
         GameObject[] salts = GameObject.FindGameObjectsWithTag("salt");
         GameObject[] waters2 = GameObject.FindGameObjectsWithTag("H2O");
         GameObject[] waters3 = GameObject.FindGameObjectsWithTag("water2");
+        GameObject[] waters4 = GameObject.FindGameObjectsWithTag("water3");
 
         foreach (GameObject salt in salts)
         {
@@ -48,11 +60,17 @@ public class Reset : MonoBehaviour
             Destroy(water);
         }
 
+        foreach (GameObject water in waters4)
+        {
+            Destroy(water);
+        }
+
         Instantiate(salt);
         Instantiate(water);
 
         GameObject Sodium = GameObject.FindGameObjectWithTag("Sodium");
         GameObject chlorine = GameObject.FindGameObjectWithTag("Chlorine");
+
 
         Sodium.GetComponent<Grabbable>().enabled = false;
         Sodium.GetComponent<GrabInteractable>().enabled = false;
@@ -63,6 +81,8 @@ public class Reset : MonoBehaviour
         chlorine.GetComponent<GrabInteractable>().enabled = false;
         chlorine.GetComponent<HandGrabInteractable>().enabled = false;
         chlorine.GetComponent<DistanceGrabInteractable>().enabled = false;
+        
+
 
     }
 }

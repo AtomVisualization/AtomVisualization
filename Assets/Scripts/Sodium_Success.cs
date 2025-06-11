@@ -10,37 +10,47 @@ using UnityEngine.TextCore.LowLevel;
 
 public class Sodium_Success : MonoBehaviour
 {
-    private float count;
-    private Detection2 detect;
+   private float count;
+    private detection detect;
+    public GameObject next;
+
+    public float count3;
+    
+
+    private const string TAG_MNGR_ASSET = "ProjectSettings/TagManager.asset";
 
 
 
 
-    // Update is called once per frame
-    public void stort1(GameObject Sod)
+
+
+    public void stort1(GameObject Sod, float count2)
     {
-        check2(Sod);
+
+        check2(Sod, count2);
     }
 
-    void check2(GameObject Sod)
+    void check2(GameObject Sod, float count2)
     {
-        count = Detection2.count;
-
-        if (count >= 3)
+        
+        //count = detection.count;
+        if (count2 >= 3)
         {
             Debug.Log("Success");
-            Detection2.count = 0;
+            //detection.count = 0;
+            count3 = 0;
+            Debug.Log(count2);
             Stort(Sod);
+            
+
         }
     }
 
 
     void Stort(GameObject Sod)
     {
-        Debug.Log("stort");
-        GameObject sodium = GameObject.FindGameObjectWithTag("Sodium");
-        GameObject[] waters = GameObject.FindGameObjectsWithTag("water");
-        count = Detection2.count;
+        float count4 = detection.count2;
+        GameObject[] waters = GameObject.FindGameObjectsWithTag("Sod_" + count4);
 
 
 
@@ -51,26 +61,27 @@ public class Sodium_Success : MonoBehaviour
             water.GetComponent<GrabInteractable>().enabled = false;
             water.GetComponent<HandGrabInteractable>().enabled = false;
             water.GetComponentInChildren<SphereCollider>().enabled = false;
-            water.transform.tag = "water2";
+            water.transform.Find("Sphere").GetComponent<SphereCollider>().enabled = false;
+            water.transform.Find("Sphere 2").GetComponent<SphereCollider>().enabled = false;
+            water.transform.tag = "water";
+
         }
-        
-            
 
-            Sod.GetComponent<Grabbable>().enabled = true;
-            Sod.GetComponent<GrabInteractable>().enabled = true;
-            Sod.GetComponent<HandGrabInteractable>().enabled = true;
-            
+        Sod.GetComponent<Grabbable>().enabled = true;
+        Sod.GetComponent<GrabInteractable>().enabled = true;
+        Sod.GetComponent<HandGrabInteractable>().enabled = true;
 
 
-        Debug.Log("Sodium " + count);
-       
-
-
+        next.SetActive(true);
 
     }
 
-}
 
+}
     
+
+
+
+
 
 

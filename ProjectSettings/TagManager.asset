@@ -28,6 +28,11 @@ TagManager:
   - Chlorine_3
   - Chlorine_4
   - Chlorine_5
+  - Sodium_1
+  - Sodium_2
+  - Sodium_3
+  - Sodium_4
+  - Sodium_5
   layers:
   - Default
   - TransparentFX
