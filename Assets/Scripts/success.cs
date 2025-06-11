@@ -29,7 +29,9 @@ public class success : MonoBehaviour
     public GameObject Notation;
     public GameObject Chart;
     public GameObject dipolemoment;
-    public GameObject blob;
+    public GameObject H2O_blob;
+    public GameObject CH4_blob;
+    public GameObject H2_blob;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -149,6 +151,7 @@ public class success : MonoBehaviour
             Success_H2.SetActive(true);
             Chart.SetActive(true);
             Invoke("deactivate", 3);
+            Invoke("H2_BLOB", 8);
         }
         else if (bond == "CH4")
         {
@@ -173,6 +176,7 @@ public class success : MonoBehaviour
             Success_CH4.SetActive(true);
             Chart.SetActive(true);
             Invoke("deactivate", 3);
+            Invoke("CH4_BLOB", 8);
         }
 
         else if (bond == "NaCl")
@@ -223,7 +227,7 @@ public class success : MonoBehaviour
             Chart.SetActive(true);
             dipolemoment.SetActive(true);
             Invoke("deactivate", 3);
-            Invoke("blobs", 4);
+            Invoke("H2O_BLOB", 8);
 
 
         }
@@ -251,8 +255,18 @@ public class success : MonoBehaviour
         Success_H2O.SetActive(false);
     }
 
-    void blobs()
+    void H2O_BLOB()
     {
-        blob.SetActive(true);
+        H2O_blob.SetActive(true);
+    }
+
+    void CH4_BLOB()
+    {
+        CH4_blob.SetActive(true);
+    }
+
+    void H2_BLOB()
+    {
+        H2_blob.SetActive(true);
     }
 }

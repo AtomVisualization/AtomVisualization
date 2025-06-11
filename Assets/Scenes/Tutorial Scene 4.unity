@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -260,11 +260,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Welcome to the final scene the dissolving sim! Here, you can view how salt
-    dissolves in water. To do this you will bring three water molecules to the salt,
-    weakening the bond and letting you move the sodium or chlorine. To move the sodium
-    you put three water molecules with the oxygen facing the sodium. For the chlorine
-    you need to have the hydrogens facing the atom. Try it!
+  m_text: 'Welcome to the Dissolving Simulation! In this simulation, you will interact
+    with water (H2O) and salt (NaCl) molecules to simulate how salt dissolves in
+    water. To complete this task, you will move 3 water molecules in the correct
+    polarity orientation and attach it to Na or Cl. Once you have successfully attached
+    3 water molecules to Na or Cl, you will be able to remove it form it''s bond,
+    thus simulating how salt dissolves in water.
+
+
+    Hint: A negative (-) charge
+    is attracted to a positive (+) charge.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -291,8 +296,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9
-  m_fontSizeBase: 9
+  m_fontSize: 7.2
+  m_fontSizeBase: 7.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1341,8 +1346,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Good job! That's it for the Tutorial! You are now ready to move on to the
-    main simulation, the next button will take you to the main menu, have fun!
+  m_text: Good job! That's it for the Tutorial! You are now ready to move back to
+    the main menu. CLick the next button whne you are ready!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2072,6 +2077,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907637461}
   m_CullTransparentMesh: 1
+--- !u!1001 &908801884
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400828380139094307, guid: ed91948b281ed8b46bd5a7a86294e16e, type: 3}
+      propertyPath: m_Name
+      value: Enviroment
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531543078932198719, guid: ed91948b281ed8b46bd5a7a86294e16e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531543078932198719, guid: ed91948b281ed8b46bd5a7a86294e16e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531543078932198719, guid: ed91948b281ed8b46bd5a7a86294e16e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531543078932198719, guid: ed91948b281ed8b46bd5a7a86294e16e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531543078932198719, guid: ed91948b281ed8b46bd5a7a86294e16e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531543078932198719, guid: ed91948b281ed8b46bd5a7a86294e16e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531543078932198719, guid: ed91948b281ed8b46bd5a7a86294e16e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531543078932198719, guid: ed91948b281ed8b46bd5a7a86294e16e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531543078932198719, guid: ed91948b281ed8b46bd5a7a86294e16e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531543078932198719, guid: ed91948b281ed8b46bd5a7a86294e16e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed91948b281ed8b46bd5a7a86294e16e, type: 3}
 --- !u!1 &1060055383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,102 +2870,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.876, y: 1.004}
   m_SizeDelta: {x: 1083, y: 419}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &1548963555
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -2565941976126357419, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.6096184
-      objectReference: {fileID: 0}
-    - target: {fileID: -2565941976126357419, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.6096184
-      objectReference: {fileID: 0}
-    - target: {fileID: -2565941976126357419, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.6096184
-      objectReference: {fileID: 0}
-    - target: {fileID: -2565941976126357419, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.1211
-      objectReference: {fileID: 0}
-    - target: {fileID: -2565941976126357419, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.96
-      objectReference: {fileID: 0}
-    - target: {fileID: -2565941976126357419, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.14
-      objectReference: {fileID: 0}
-    - target: {fileID: -447275898630060098, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -17.87
-      objectReference: {fileID: 0}
-    - target: {fileID: -447275898630060098, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.91
-      objectReference: {fileID: 0}
-    - target: {fileID: -447275898630060098, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-      propertyPath: m_Name
-      value: lab scene walls
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 65702495048144492, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-    - {fileID: -2845779275431937956, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-    - {fileID: -8700617353114198275, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7cc75dfc4e10ebb46848de29ea555972, type: 3}
 --- !u!1 &1569462388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,100 +2945,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569462388}
   m_CullTransparentMesh: 1
---- !u!1 &1595474262
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1595474264}
-  - component: {fileID: 1595474263}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &1595474263
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595474262}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 1
-  m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &1595474264
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595474262}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1699391111
 GameObject:
   m_ObjectHideFlags: 0
@@ -4032,7 +3904,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1595474264}
   - {fileID: 2016791507}
   - {fileID: 655843981}
   - {fileID: 1908445770}
@@ -4042,6 +3913,6 @@ SceneRoots:
   - {fileID: 1521191115}
   - {fileID: 333668152}
   - {fileID: 1833400219}
-  - {fileID: 1548963555}
   - {fileID: 1699391115}
   - {fileID: 1773813974}
+  - {fileID: 908801884}

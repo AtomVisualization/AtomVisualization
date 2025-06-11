@@ -34,6 +34,8 @@ public class detection : MonoBehaviour
        private static bool debounce5 = false;
         private static bool debounce6 = false;
          private static bool debounce7 = false;
+    private bool debounce8 = false;
+   
 
 
 
@@ -51,8 +53,11 @@ public class detection : MonoBehaviour
                 Create();
                
             }
-
-            newTag = "Chlor_" + count2;
+            if (debounce8 == false)
+            {
+                newTag = "Chlor_" + count2;
+            }
+            
 
             this.transform.parent.tag = newTag;
             if (debounce == true)
@@ -64,6 +69,7 @@ public class detection : MonoBehaviour
 
             debounce = true;
             debounce2 = true;
+            debounce8 = true;
             other.GetComponent<Chlorine_Success>().stort1(obj, count3);
 
 
@@ -81,7 +87,10 @@ public class detection : MonoBehaviour
                
             }
 
-            newTag = "Chlor_" + count2;
+            if (debounce8 == false)
+            {
+                newTag = "Chlor_" + count2;
+            }
 
             this.transform.parent.tag = newTag;
             if (debounce == true)
@@ -93,6 +102,7 @@ public class detection : MonoBehaviour
 
             debounce = true;
             debounce3 = true;
+            debounce8 = true;
             other.GetComponent<Chlorine_Success>().stort1(obj, count4);
 
 
@@ -110,7 +120,10 @@ public class detection : MonoBehaviour
                
             }
 
-            newTag = "Chlor_" + count2;
+            if (debounce8 == false)
+            {
+                newTag = "Chlor_" + count2;
+            }
 
             this.transform.parent.tag = newTag;
             if (debounce == true)
@@ -122,6 +135,7 @@ public class detection : MonoBehaviour
 
             debounce = true;
             debounce4 = true;
+            debounce8 = true;
             other.GetComponent<Chlorine_Success>().stort1(obj, count5);
 
 
@@ -138,8 +152,10 @@ public class detection : MonoBehaviour
                
             }
 
-            newTag = "Chlor_" + count2;
-
+            if (debounce8 == false)
+            {
+                newTag = "Chlor_" + count2;
+            }
             this.transform.parent.tag = newTag;
             if (debounce == true)
             {
@@ -150,6 +166,7 @@ public class detection : MonoBehaviour
 
             debounce = true;
             debounce5 = true;
+            debounce8 = true;
             other.GetComponent<Chlorine_Success>().stort1(obj, count6);
 
 
@@ -166,7 +183,10 @@ public class detection : MonoBehaviour
                
             }
 
-            newTag = "Chlor_" + count2;
+            if (debounce8 == false)
+            {
+                newTag = "Chlor_" + count2;
+            }
 
             this.transform.parent.tag = newTag;
             if (debounce == true)
@@ -178,6 +198,7 @@ public class detection : MonoBehaviour
 
             debounce = true;
             debounce6 = true;
+            debounce8 = true;
             other.GetComponent<Chlorine_Success>().stort1(obj, count7);
 
 
@@ -193,7 +214,10 @@ public class detection : MonoBehaviour
                
             }
 
-            newTag = "Chlor_" + count2;
+            if (debounce8 == false)
+            {
+                newTag = "Chlor_" + count2;
+            }
 
             this.transform.parent.tag = newTag;
             if (debounce == true)
@@ -205,6 +229,7 @@ public class detection : MonoBehaviour
 
             debounce = true;
             debounce7 = true;
+            debounce8 = true;
             other.GetComponent<Chlorine_Success>().stort1(obj, count8);
 
 
@@ -218,10 +243,68 @@ public class detection : MonoBehaviour
     {
         if (other.CompareTag("Chlorine"))
         {
+            count3 = count3 - 1;
 
-            
+            if (count3 < 0)
+            {
+                count3 = 0;
+            }
+
+        }
+
+
+        if (other.CompareTag("Chlorine_1"))
+        {
+            count4 = count4 - 1;
+
+            if (count4 < 0)
+            {
+                count4 = 0;
+            }
+        }
+
+        if (other.CompareTag("Chlorine_2"))
+        {
+            count5 = count5 - 1;
+
+            if (count5 < 0)
+            {
+                count5 = 0;
+            }
+        }
+
+        if (other.CompareTag("Chlorine_3"))
+        {
+            count6 = count6 - 1;
+
+            if (count6 < 0)
+            {
+                count6 = 0;
+            }
+        }
+
+        if (other.CompareTag("Chlorine_4"))
+        {
+            count7 = count7 - 1;
+
+            if (count7 < 0)
+            {
+                count7 = 0;
+            }
+        }
+
+
+        if (other.CompareTag("Chlorine_5"))
+        {
+            count8 = count8 - 1;
+
+            if (count8 < 0)
+            {
+                count8 = 0;
+            }
         }
     }
+                        
 
     public void ResetCounter()
     {

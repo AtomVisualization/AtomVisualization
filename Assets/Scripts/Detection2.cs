@@ -33,6 +33,7 @@ public class Detection2 : MonoBehaviour
     private static bool debounce5 = false;
     private static bool debounce6 = false;
     private static bool debounce7 = false;
+    private bool debounce8 = false;
 
 
 
@@ -50,8 +51,10 @@ public class Detection2 : MonoBehaviour
                 Create();
 
             }
-
-            newTag = "Sod_" + count2;
+                if (debounce8 == false)
+            {
+                newTag = "Sod_" + count2;
+            }
 
             this.transform.parent.tag = newTag;
             if (debounce == true)
@@ -63,6 +66,7 @@ public class Detection2 : MonoBehaviour
 
             debounce = true;
             debounce2 = true;
+            debounce8 = true;
             other.GetComponent<Sodium_Success>().stort1(obj, count3);
 
 
@@ -215,10 +219,67 @@ public class Detection2 : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Chlorine"))
+        if (other.CompareTag("Sodium"))
         {
+            count3 = count3 - 1;
+
+            if (count3 < 0)
+            {
+                count3 = 0;
+            }
 
 
+
+            if (other.CompareTag("Sodium_1"))
+            {
+                count4 = count4 - 1;
+
+                if (count4 < 0)
+                {
+                    count4 = 0;
+                }
+            }
+
+            if (other.CompareTag("Sodium_2"))
+            {
+                count5 = count5 - 1;
+
+                if (count5 < 0)
+                {
+                    count5 = 0;
+                }
+            }
+
+            if (other.CompareTag("Sodium_3"))
+            {
+                count6 = count6 - 1;
+
+                if (count6 < 0)
+                {
+                    count6 = 0;
+                }
+            }
+
+            if (other.CompareTag("Sodium_4"))
+            {
+                count7 = count7 - 1;
+
+                if (count7 < 0)
+                {
+                    count7 = 0;
+                }
+            }
+
+
+            if (other.CompareTag("Sodium_5"))
+            {
+                count8 = count8 - 1;
+
+                if (count8 < 0)
+                {
+                    count8 = 0;
+                }
+            }
         }
     }
 

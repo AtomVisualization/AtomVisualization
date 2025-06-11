@@ -37,7 +37,7 @@ public class Sodium_Success : MonoBehaviour
         if (count2 >= 3)
         {
             Debug.Log("Success");
-            //detection.count = 0;
+      
             count3 = 0;
             Debug.Log(count2);
             Stort(Sod);
@@ -49,7 +49,7 @@ public class Sodium_Success : MonoBehaviour
 
     void Stort(GameObject Sod)
     {
-        float count4 = detection.count2;
+        float count4 = Detection2.count2;
         GameObject[] waters = GameObject.FindGameObjectsWithTag("Sod_" + count4);
 
 
