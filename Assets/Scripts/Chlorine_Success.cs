@@ -16,7 +16,7 @@ public class Chlorine_Success : MonoBehaviour
 {
 
     private float count;
-    private detection detect;
+   
     public GameObject next;
 
     public float count3;

@@ -10,13 +10,14 @@ using System;
 
 using UnityEditorInternal;
 
+#endif
+
 //*****************************************
 
 
 public class detection : MonoBehaviour
 {
 
-    public float count = 0;
     private string newTag;
     private string oldTag = "H2O";
     private bool debounce = false;
@@ -356,4 +357,4 @@ public class detection : MonoBehaviour
 }
 
 
-#endif
+//#endif
