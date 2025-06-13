@@ -46,7 +46,7 @@ public class Detection2 : MonoBehaviour
             }
             tag1 = "Sod_1";
 
-            if (other.CompareTag("Chlor_1") || other.CompareTag("Chlor_2") || other.CompareTag("Chlor_3") || other.CompareTag("Chlor_4") || other.CompareTag("Chlor_5") || other.CompareTag("Chlor_6"))
+            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6")
             {
                 return;
             }
@@ -90,7 +90,7 @@ public class Detection2 : MonoBehaviour
 
             tag1 = "Sod_2";
 
-            if (other.CompareTag("Chlor_1") || other.CompareTag("Chlor_2") || other.CompareTag("Chlor_3") || other.CompareTag("Chlor_4") || other.CompareTag("Chlor_5") || other.CompareTag("Chlor_6"))
+            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6")
             {
                 return;
             }
@@ -134,7 +134,7 @@ public class Detection2 : MonoBehaviour
             }
             tag1 = "Sod_3";
 
-            if (other.CompareTag("Chlor_1") || other.CompareTag("Chlor_2") || other.CompareTag("Chlor_3") || other.CompareTag("Chlor_4") || other.CompareTag("Chlor_5") || other.CompareTag("Chlor_6"))
+            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6")
             {
                 return;
             }
@@ -178,7 +178,7 @@ public class Detection2 : MonoBehaviour
 
             tag1 = "Sod_4";
 
-            if (other.CompareTag("Chlor_1") || other.CompareTag("Chlor_2") || other.CompareTag("Chlor_3") || other.CompareTag("Chlor_4") || other.CompareTag("Chlor_5") || other.CompareTag("Chlor_6"))
+            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6")
             {
                 return;
             }
@@ -221,7 +221,7 @@ public class Detection2 : MonoBehaviour
 
             tag1 = "Sod_5";
 
-            if (other.CompareTag("Chlor_1") || other.CompareTag("Chlor_2") || other.CompareTag("Chlor_3") || other.CompareTag("Chlor_4") || other.CompareTag("Chlor_5") || other.CompareTag("Chlor_6"))
+           if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6")
             {
                 return;
             }
@@ -265,7 +265,7 @@ public class Detection2 : MonoBehaviour
 
             tag1 = "Sod_6";
 
-            if (other.CompareTag("Chlor_1") || other.CompareTag("Chlor_2") || other.CompareTag("Chlor_3") || other.CompareTag("Chlor_4") || other.CompareTag("Chlor_5") || other.CompareTag("Chlor_6"))
+            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6")
             {
                 return;
             }

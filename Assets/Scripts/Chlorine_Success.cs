@@ -43,7 +43,6 @@ public class Chlorine_Success : MonoBehaviour
         {
             Debug.Log("Success");
             //detection.count = 0;
-            count3 = 0;
             Debug.Log(count2);
             Stort(Chlor, tag1);
             

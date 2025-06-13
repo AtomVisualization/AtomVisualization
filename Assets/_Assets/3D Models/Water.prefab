@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 3167740366481037872}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.03366849, z: -0, w: 0.9994331}
-  m_LocalPosition: {x: 0.021, y: -0.09, z: 0.368}
-  m_LocalScale: {x: 0.34854373, y: 0.28971955, z: 0.28887355}
+  m_LocalPosition: {x: 0.021, y: -0.133, z: 0.368}
+  m_LocalScale: {x: 0.16061941, y: 0.13351147, z: 0.1331216}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4674832233124372674}
@@ -118,8 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11627dae39f4ab94bad136ba9509b229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newTag: water
-  oldTag: H2O
 --- !u!1 &5648569090644941809
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,8 +147,8 @@ Transform:
   m_GameObject: {fileID: 5648569090644941809}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.33175844, z: -0, w: 0.94336444}
-  m_LocalPosition: {x: 0.022536295, y: 0.509, z: 0.3831693}
-  m_LocalScale: {x: 0.38541475, y: 0.536984, z: 0.42844346}
+  m_LocalPosition: {x: 0.022536295, y: 0.715, z: 0.3831693}
+  m_LocalScale: {x: 0.2307723, y: 0.32152647, z: 0.25653633}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4674832233124372674}
@@ -238,8 +236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2b9fae81fefc540b103ef25c6fba39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newTag: water
-  oldTag: H2O
 --- !u!1 &5896161222682344511
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Molecule_Scene.unity
     guid: 7b85157e8b0b48742a4f2328a74711a8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Dissolving scene.unity
     guid: 9ee4f0943aabe9b41927b77ab6692b19
   - enabled: 1
@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial Scene 3.unity
     guid: 221c5d3ac8be39f4b9d5c6f94fbfbd9d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Tutorial Scene 4.unity
     guid: 16a0e6cc4b06f5e41a2b28d43a39efcd
   m_configObjects:
