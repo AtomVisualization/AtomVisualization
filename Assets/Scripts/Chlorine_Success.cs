@@ -29,13 +29,13 @@ public class Chlorine_Success : MonoBehaviour
 
 
 
-    public void stort1(GameObject Chlor, float count2)
+    public void stort1(GameObject Chlor, float count2, string tag1)
     {
 
-        check2(Chlor, count2);
+        check2(Chlor, count2, tag1);
     }
 
-    void check2(GameObject Chlor, float count2)
+    void check2(GameObject Chlor, float count2, string tag1)
     {
         
         //count = detection.count;
@@ -45,17 +45,17 @@ public class Chlorine_Success : MonoBehaviour
             //detection.count = 0;
             count3 = 0;
             Debug.Log(count2);
-            Stort(Chlor);
+            Stort(Chlor, tag1);
             
 
         }
     }
 
 
-    void Stort(GameObject Chlor)
+    void Stort(GameObject Chlor, string tag1)
     {
         float count4 = detection.count2;
-        GameObject[] waters = GameObject.FindGameObjectsWithTag("Chlor_" + count4);
+        GameObject[] waters = GameObject.FindGameObjectsWithTag(tag1);
 
 
 

@@ -3,26 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-//******************************************
-
-
-#if UNITY_EDITOR
-
-using UnityEditorInternal;
-
-#endif
-
-//*****************************************
-
 
 public class Detection2 : MonoBehaviour
 {
+
     private string newTag;
     private string oldTag = "H2O";
     private bool debounce = false;
 
     public static float count2 = 0;
-   public static float count3 = 0;
+    public static float count3 = 0;
     public static float count4 = 0;
     public static float count5 = 0;
     public static float count6 = 0;
@@ -35,6 +25,8 @@ public class Detection2 : MonoBehaviour
     private static bool debounce6 = false;
     private static bool debounce7 = false;
     private bool debounce8 = false;
+    private string tag1;
+
 
 
 
@@ -44,18 +36,30 @@ public class Detection2 : MonoBehaviour
 
         GameObject obj = other.GetComponentInParent<Transform>().gameObject;
 
+
         if (other.CompareTag("Sodium"))
         {
-            if (debounce2 == false)
+
+            if (debounce8 == true)
+            {
+                return;
+            }
+            tag1 = "Sod_1";
+
+            if (other.CompareTag("Chlor_1") || other.CompareTag("Chlor_2") || other.CompareTag("Chlor_3") || other.CompareTag("Chlor_4") || other.CompareTag("Chlor_5") || other.CompareTag("Chlor_6"))
+            {
+                return;
+            }
+            if (debounce2 == false && debounce8 == false)
             {
                 count2 = count2 + 1;
-                Create();
 
             }
-                if (debounce8 == false)
+            if (debounce8 == false)
             {
-                newTag = "Sod_" + count2;
+                newTag = "Sod_1";
             }
+
 
             this.transform.parent.tag = newTag;
             if (debounce == true)
@@ -68,7 +72,7 @@ public class Detection2 : MonoBehaviour
             debounce = true;
             debounce2 = true;
             debounce8 = true;
-            other.GetComponent<Sodium_Success>().stort1(obj, count3);
+            other.GetComponent<Sodium_Success>().stort1(obj, count3, tag1);
 
 
             Invoke("ResetCounter", 0.5f);
@@ -78,14 +82,29 @@ public class Detection2 : MonoBehaviour
 
         if (other.CompareTag("Sodium_1"))
         {
-            if (debounce3 == false)
+
+             if (debounce8 == true)
+            {
+                return;
+            }
+
+            tag1 = "Sod_2";
+
+            if (other.CompareTag("Chlor_1") || other.CompareTag("Chlor_2") || other.CompareTag("Chlor_3") || other.CompareTag("Chlor_4") || other.CompareTag("Chlor_5") || other.CompareTag("Chlor_6"))
+            {
+                return;
+            }
+            if (debounce3 == false && debounce8 == false)
             {
                 count2 = count2 + 1;
-                Create();
+
 
             }
 
-            newTag = "Sod_" + count2;
+            if (debounce8 == false)
+            {
+                newTag = "Sod_2";
+            }
 
             this.transform.parent.tag = newTag;
             if (debounce == true)
@@ -97,7 +116,8 @@ public class Detection2 : MonoBehaviour
 
             debounce = true;
             debounce3 = true;
-           other.GetComponent<Sodium_Success>().stort1(obj, count4);
+            debounce8 = true;
+            other.GetComponent<Sodium_Success>().stort1(obj, count3, tag1);
 
 
             Invoke("ResetCounter", 0.5f);
@@ -107,14 +127,28 @@ public class Detection2 : MonoBehaviour
 
         if (other.CompareTag("Sodium_2"))
         {
-            if (debounce4 == false)
+
+             if (debounce8 == true)
+            {
+                return;
+            }
+            tag1 = "Sod_3";
+
+            if (other.CompareTag("Chlor_1") || other.CompareTag("Chlor_2") || other.CompareTag("Chlor_3") || other.CompareTag("Chlor_4") || other.CompareTag("Chlor_5") || other.CompareTag("Chlor_6"))
+            {
+                return;
+            }
+            if (debounce4 == false && debounce8 == false)
             {
                 count2 = count2 + 1;
-                Create();
+
 
             }
 
-            newTag = "Sod_" + count2;
+            if (debounce8 == false)
+            {
+                newTag = "Sod_3";
+            }
 
             this.transform.parent.tag = newTag;
             if (debounce == true)
@@ -126,7 +160,8 @@ public class Detection2 : MonoBehaviour
 
             debounce = true;
             debounce4 = true;
-            other.GetComponent<Sodium_Success>().stort1(obj, count5);
+            debounce8 = true;
+            other.GetComponent<Sodium_Success>().stort1(obj, count3, tag1);
 
 
             Invoke("ResetCounter", 0.5f);
@@ -135,15 +170,29 @@ public class Detection2 : MonoBehaviour
 
         if (other.CompareTag("Sodium_3"))
         {
-            if (debounce5 == false)
+
+             if (debounce8 == true)
+            {
+                return;
+            }
+
+            tag1 = "Sod_4";
+
+            if (other.CompareTag("Chlor_1") || other.CompareTag("Chlor_2") || other.CompareTag("Chlor_3") || other.CompareTag("Chlor_4") || other.CompareTag("Chlor_5") || other.CompareTag("Chlor_6"))
+            {
+                return;
+            }
+            if (debounce5 == false && debounce8 == false)
             {
                 count2 = count2 + 1;
-                Create();
+
 
             }
 
-            newTag = "Sod_" + count2;
-
+            if (debounce8 == false)
+            {
+                newTag = "Sod_4";
+            }
             this.transform.parent.tag = newTag;
             if (debounce == true)
             {
@@ -154,7 +203,8 @@ public class Detection2 : MonoBehaviour
 
             debounce = true;
             debounce5 = true;
-           other.GetComponent<Sodium_Success>().stort1(obj, count6);
+            debounce8 = true;
+            other.GetComponent<Sodium_Success>().stort1(obj, count3, tag1);
 
 
             Invoke("ResetCounter", 0.5f);
@@ -163,14 +213,30 @@ public class Detection2 : MonoBehaviour
 
         if (other.CompareTag("Sodium_4"))
         {
-            if (debounce6 == false)
+
+             if (debounce8 == true)
+            {
+                return;
+            }
+
+            tag1 = "Sod_5";
+
+            if (other.CompareTag("Chlor_1") || other.CompareTag("Chlor_2") || other.CompareTag("Chlor_3") || other.CompareTag("Chlor_4") || other.CompareTag("Chlor_5") || other.CompareTag("Chlor_6"))
+            {
+                return;
+            }
+            if (debounce6 == false && debounce8 == false)
             {
                 count2 = count2 + 1;
-                Create();
+
 
             }
 
-            newTag = "Sod_" + count2;
+            if (debounce8 == false)
+            {
+                newTag = "Sod_5";
+            }
+            
 
             this.transform.parent.tag = newTag;
             if (debounce == true)
@@ -182,7 +248,8 @@ public class Detection2 : MonoBehaviour
 
             debounce = true;
             debounce6 = true;
-            other.GetComponent<Sodium_Success>().stort1(obj, count7);
+            debounce8 = true;
+            other.GetComponent<Sodium_Success>().stort1(obj, count3, tag1);
 
 
             Invoke("ResetCounter", 0.5f);
@@ -190,14 +257,29 @@ public class Detection2 : MonoBehaviour
 
         if (other.CompareTag("Sodium_5"))
         {
-            if (debounce7 == false)
+
+             if (debounce8 == true)
+            {
+                return;
+            }
+
+            tag1 = "Sod_6";
+
+            if (other.CompareTag("Chlor_1") || other.CompareTag("Chlor_2") || other.CompareTag("Chlor_3") || other.CompareTag("Chlor_4") || other.CompareTag("Chlor_5") || other.CompareTag("Chlor_6"))
+            {
+                return;
+            }
+            if (debounce7 == false && debounce8 == false)
             {
                 count2 = count2 + 1;
-                Create();
+
 
             }
 
-            newTag = "Sod_" + count2;
+            if (debounce8 == false)
+            {
+                newTag = "Sod_6";
+            }
 
             this.transform.parent.tag = newTag;
             if (debounce == true)
@@ -209,7 +291,8 @@ public class Detection2 : MonoBehaviour
 
             debounce = true;
             debounce7 = true;
-            other.GetComponent<Sodium_Success>().stort1(obj, count8);
+            debounce8 = true;
+            other.GetComponent<Sodium_Success>().stort1(obj, count3, tag1);
 
 
             Invoke("ResetCounter", 0.5f);
@@ -220,7 +303,7 @@ public class Detection2 : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Sodium"))
+        if (other.CompareTag("Chlorine"))
         {
             count3 = count3 - 1;
 
@@ -229,108 +312,79 @@ public class Detection2 : MonoBehaviour
                 count3 = 0;
             }
 
+            debounce8 = false;
 
-
-            if (other.CompareTag("Sodium_1"))
-            {
-                count4 = count4 - 1;
-
-                if (count4 < 0)
-                {
-                    count4 = 0;
-                }
-            }
-
-            if (other.CompareTag("Sodium_2"))
-            {
-                count5 = count5 - 1;
-
-                if (count5 < 0)
-                {
-                    count5 = 0;
-                }
-            }
-
-            if (other.CompareTag("Sodium_3"))
-            {
-                count6 = count6 - 1;
-
-                if (count6 < 0)
-                {
-                    count6 = 0;
-                }
-            }
-
-            if (other.CompareTag("Sodium_4"))
-            {
-                count7 = count7 - 1;
-
-                if (count7 < 0)
-                {
-                    count7 = 0;
-                }
-            }
-
-
-            if (other.CompareTag("Sodium_5"))
-            {
-                count8 = count8 - 1;
-
-                if (count8 < 0)
-                {
-                    count8 = 0;
-                }
-            }
         }
+
+
+        if (other.CompareTag("Chlorine_1"))
+        {
+            count4 = count4 - 1;
+
+            if (count4 < 0)
+            {
+                count4 = 0;
+            }
+
+            debounce8 = false;
+        }
+
+        if (other.CompareTag("Chlorine_2"))
+        {
+            count5 = count5 - 1;
+
+            if (count5 < 0)
+            {
+                count5 = 0;
+            }
+
+            debounce8 = false;
+        }
+
+        if (other.CompareTag("Chlorine_3"))
+        {
+            count6 = count6 - 1;
+
+            if (count6 < 0)
+            {
+                count6 = 0;
+            }
+
+            debounce8 = false;
+        }
+
+        if (other.CompareTag("Chlorine_4"))
+        {
+            count7 = count7 - 1;
+
+            if (count7 < 0)
+            {
+                count7 = 0;
+            }
+
+            debounce8 = false;
+        }
+
+
+        if (other.CompareTag("Chlorine_5"))
+        {
+            count8 = count8 - 1;
+
+            if (count8 < 0)
+            {
+                count8 = 0;
+            }
+
+            debounce8 = false;
+        }
+
     }
+
 
     public void ResetCounter()
     {
         debounce = false;
     }
-
-    static private void Add(List<string> tags, string tag)
-    {
-
-        InternalEditorUtility.AddTag(tag);
-
-        tags.Add(tag);
-
-
-
-
-    }
-
-    static private void Remove(List<string> tags, string tag)
-    {
-        InternalEditorUtility.RemoveTag(tag);
-
-        tags.Remove(tag);
-
-
-
-
-    }
-
-
-    public void Create()
-    {
-
-        List<string> tags = new List<string>(InternalEditorUtility.tags);
-
-        Add(tags, "Sod_" + count2);
-
-
-    }
-
-    public void Des()
-    {
-        List<string> tags = new List<string>(InternalEditorUtility.tags);
-
-        Remove(tags, "Sod_" + count2);
-    }
-
-
 }
 
 
