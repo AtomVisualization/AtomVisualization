@@ -13,8 +13,11 @@ public class Deactivate_Object : MonoBehaviour
     public GameObject original5;
     public GameObject original6;
     public GameObject original7;
-    public GameObject ion;
-    public GameObject chart;
+
+
+    public GameObject CH4_blob;
+    public GameObject H2_blob;
+    public GameObject H2O_blob;
 
 
     public void Deactivate()
@@ -63,8 +66,10 @@ public class Deactivate_Object : MonoBehaviour
             Destroy(oxygen);
         }
 
-        ion.SetActive(false);
-        chart.SetActive(false);
+
+        CH4_blob.SetActive(false);
+        H2O_blob.SetActive(false);
+        H2_blob.SetActive(false);
         // Instantiates the original molecules
         Instantiate(original1);
         Instantiate(original2);
@@ -73,5 +78,6 @@ public class Deactivate_Object : MonoBehaviour
         Instantiate(original5);
         Instantiate(original6);
         Instantiate(original7);
+
     }
 }

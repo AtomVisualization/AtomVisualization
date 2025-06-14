@@ -26,9 +26,6 @@ public class success : MonoBehaviour
     public GameObject Success_H2O;
     public AudioSource success_sound;
     public GameObject next;
-    public GameObject Notation;
-    public GameObject Chart;
-    public GameObject dipolemoment;
     public GameObject H2O_blob;
     public GameObject CH4_blob;
     public GameObject H2_blob;
@@ -149,7 +146,6 @@ public class success : MonoBehaviour
 
             Instantiate(H2_Anim);
             Success_H2.SetActive(true);
-            Chart.SetActive(true);
             Invoke("deactivate", 3);
             Invoke("H2_BLOB", 8);
         }
@@ -174,7 +170,6 @@ public class success : MonoBehaviour
 
             Instantiate(CH4_Anim);
             Success_CH4.SetActive(true);
-            Chart.SetActive(true);
             Invoke("deactivate", 3);
             Invoke("CH4_BLOB", 8);
         }
@@ -199,8 +194,6 @@ public class success : MonoBehaviour
 
             Instantiate(NaCl_Anim);
             Success_NaCl.SetActive(true);
-            Notation.SetActive(true);
-            Chart.SetActive(true);
             Invoke("deactivate", 3);
         }
 
@@ -224,8 +217,6 @@ public class success : MonoBehaviour
 
             Instantiate(H2O_Anim);
             Success_H2O.SetActive(true);
-            Chart.SetActive(true);
-            dipolemoment.SetActive(true);
             Invoke("deactivate", 3);
             Invoke("H2O_BLOB", 8);
 
@@ -269,4 +260,6 @@ public class success : MonoBehaviour
     {
         H2_blob.SetActive(true);
     }
+
+
 }

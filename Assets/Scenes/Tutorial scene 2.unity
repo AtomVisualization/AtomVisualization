@@ -2621,7 +2621,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 57.359, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.024, y: 1.004}
+  m_AnchoredPosition: {x: 1.024, y: 1.37}
   m_SizeDelta: {x: 1083, y: 419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &136044156
@@ -11990,7 +11990,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490153954}
   m_LocalRotation: {x: -0, y: -0.2981374, z: -0, w: 0.95452297}
-  m_LocalPosition: {x: 0, y: 0, z: 1.17}
+  m_LocalPosition: {x: 0, y: 0, z: 1.044}
   m_LocalScale: {x: 0.0010455182, y: 0.0010455182, z: 0.0010455182}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12001,7 +12001,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -34.692, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.18, y: 1.28}
+  m_AnchoredPosition: {x: -1.093, y: 1.28}
   m_SizeDelta: {x: 1083, y: 419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &490306906
@@ -14588,7 +14588,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 2.371, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.299, y: 1.606}
+  m_AnchoredPosition: {x: 1.299, y: 2.212}
   m_SizeDelta: {x: 1083, y: 419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &580501860
@@ -15829,20 +15829,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to the Electron Simulation! In this simulation, you will be able
-    to test your knowledge from the previous Models Scene. For the selected atom
-    you will need to insert the correct amount of electrons in the correct order
+  m_text: "Welcome to the <b>Electron Simulation!</b> In this simulation, you will
+    be able to test your knowledge from the previous Models Scene. \n\nFor the selected
+    atom you will need to insert the correct amount of electrons in the correct order
     of electron shells. When you fill the first shell with the correct amount of
-    electrons and press the check button, the next shell will appear try it!
-
-
-    Once
-    you have completed this task, click the next button to move on.
-
-
-    Hint: 
-    Carbon has 2 electrons in the first electron shell, and 4 electrons in the second
-    electron shell.'
+    electrons and press the check button, the next shell will appear try it!\n\nOnce
+    you have completed this task, click the next button to move on.\n\nHint:  Carbon
+    has 2 electrons in the first electron shell, and 4 electrons in the second electron
+    shell."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15869,8 +15863,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7.13
-  m_fontSizeBase: 7.13
+  m_fontSize: 6.8
+  m_fontSizeBase: 6.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -26967,7 +26961,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 48.54, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.165, y: 1.232}
+  m_AnchoredPosition: {x: 1.165, y: 1.577}
   m_SizeDelta: {x: 1491, y: 427}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1047303662
@@ -43265,7 +43259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Back
+  m_text: 'Back to main menu
 
 '
   m_isRightToLeft: 0
@@ -43294,8 +43288,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

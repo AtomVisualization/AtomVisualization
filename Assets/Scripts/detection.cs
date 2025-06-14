@@ -18,6 +18,8 @@ public class detection : MonoBehaviour
     public static float count6 = 0;
     public static float count7 = 0;
     public static float count8 = 0;
+    public static float count9 = 0;
+    public static float count10 = 0;
     private static bool debounce2 = false;
     private static bool debounce3 = false;
     private static bool debounce4 = false;
@@ -25,6 +27,8 @@ public class detection : MonoBehaviour
     private static bool debounce6 = false;
     private static bool debounce7 = false;
     private bool debounce8 = false;
+    private static bool debounce9 = false;
+    private static bool debounce10 = false;
     private string tag1;
 
 
@@ -46,7 +50,7 @@ public class detection : MonoBehaviour
             }
             tag1 = "Chlor_1";
 
-           if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2"  || this.transform.parent.tag == "Sod_3"  || this.transform.parent.tag == "Sod_4"  || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6")
+            if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2" || this.transform.parent.tag == "Sod_3" || this.transform.parent.tag == "Sod_4" || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6")
             {
                 return;
             }
@@ -83,14 +87,14 @@ public class detection : MonoBehaviour
         if (other.CompareTag("Chlorine_1"))
         {
 
-             if (debounce8 == true)
+            if (debounce8 == true)
             {
                 return;
             }
 
             tag1 = "Chlor_2";
 
-            if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2"  || this.transform.parent.tag == "Sod_3"  || this.transform.parent.tag == "Sod_4"  || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6")
+            if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2" || this.transform.parent.tag == "Sod_3" || this.transform.parent.tag == "Sod_4" || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6" || this.transform.parent.tag == "Sod_7" || this.transform.parent.tag == "Sod_8")
             {
                 return;
             }
@@ -128,13 +132,13 @@ public class detection : MonoBehaviour
         if (other.CompareTag("Chlorine_2"))
         {
 
-             if (debounce8 == true)
+            if (debounce8 == true)
             {
                 return;
             }
             tag1 = "Chlor_3";
 
-            if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2"  || this.transform.parent.tag == "Sod_3"  || this.transform.parent.tag == "Sod_4"  || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6")
+            if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2" || this.transform.parent.tag == "Sod_3" || this.transform.parent.tag == "Sod_4" || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6" || this.transform.parent.tag == "Sod_7" || this.transform.parent.tag == "Sod_8")
             {
                 return;
             }
@@ -168,17 +172,16 @@ public class detection : MonoBehaviour
 
         }
 
-        if (other.CompareTag("Chlorine_3"))
+         if (other.CompareTag("Chlorine_3"))
         {
 
-             if (debounce8 == true)
+            if (debounce8 == true)
             {
                 return;
             }
-
             tag1 = "Chlor_4";
 
-            if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2"  || this.transform.parent.tag == "Sod_3"  || this.transform.parent.tag == "Sod_4"  || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6")
+            if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2" || this.transform.parent.tag == "Sod_3" || this.transform.parent.tag == "Sod_4" || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6" || this.transform.parent.tag == "Sod_7" || this.transform.parent.tag == "Sod_8")
             {
                 return;
             }
@@ -193,6 +196,7 @@ public class detection : MonoBehaviour
             {
                 newTag = "Chlor_4";
             }
+
             this.transform.parent.tag = newTag;
             if (debounce == true)
             {
@@ -211,17 +215,18 @@ public class detection : MonoBehaviour
 
         }
 
+
         if (other.CompareTag("Chlorine_4"))
         {
 
-             if (debounce8 == true)
+            if (debounce8 == true)
             {
                 return;
             }
 
             tag1 = "Chlor_5";
 
-            if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2"  || this.transform.parent.tag == "Sod_3"  || this.transform.parent.tag == "Sod_4"  || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6")
+            if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2" || this.transform.parent.tag == "Sod_3" || this.transform.parent.tag == "Sod_4" || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6" || this.transform.parent.tag == "Sod_7" || this.transform.parent.tag == "Sod_8")
             {
                 return;
             }
@@ -236,7 +241,7 @@ public class detection : MonoBehaviour
             {
                 newTag = "Chlor_5";
             }
-            
+
 
             this.transform.parent.tag = newTag;
             if (debounce == true)
@@ -258,14 +263,14 @@ public class detection : MonoBehaviour
         if (other.CompareTag("Chlorine_5"))
         {
 
-             if (debounce8 == true)
+            if (debounce8 == true)
             {
                 return;
             }
 
             tag1 = "Chlor_6";
 
-            if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2"  || this.transform.parent.tag == "Sod_3"  || this.transform.parent.tag == "Sod_4"  || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6")
+            if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2" || this.transform.parent.tag == "Sod_3" || this.transform.parent.tag == "Sod_4" || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6" || this.transform.parent.tag == "Sod_7" || this.transform.parent.tag == "Sod_8")
             {
                 return;
             }
@@ -299,6 +304,94 @@ public class detection : MonoBehaviour
 
         }
 
+        if (other.CompareTag("Chlorine_6"))
+        {
+
+            if (debounce8 == true)
+            {
+                return;
+            }
+
+            tag1 = "Chlor_7";
+
+            if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2" || this.transform.parent.tag == "Sod_3" || this.transform.parent.tag == "Sod_4" || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6" || this.transform.parent.tag == "Sod_7" || this.transform.parent.tag == "Sod_8")
+            {
+                return;
+            }
+            if (debounce9 == false && debounce8 == false)
+            {
+                count2 = count2 + 1;
+
+
+            }
+
+            if (debounce8 == false)
+            {
+                newTag = "Chlor_7";
+            }
+
+            this.transform.parent.tag = newTag;
+            if (debounce == true)
+            {
+                return;
+            }
+
+            count9 = count9 + 1;
+
+            debounce = true;
+            debounce9 = true;
+            debounce8 = true;
+            other.GetComponent<Chlorine_Success>().stort1(obj, count9, tag1);
+
+
+            Invoke("ResetCounter", 0.5f);
+
+        }
+        
+        if (other.CompareTag("Chlorine_7"))
+        {
+
+             if (debounce8 == true)
+            {
+                return;
+            }
+
+            tag1 = "Chlor_8";
+
+            if (this.transform.parent.tag == "Sod_1" || this.transform.parent.tag == "Sod_2"  || this.transform.parent.tag == "Sod_3"  || this.transform.parent.tag == "Sod_4"  || this.transform.parent.tag == "Sod_5" || this.transform.parent.tag == "Sod_6" || this.transform.parent.tag == "Sod_7" || this.transform.parent.tag == "Sod_8")
+            {
+                return;
+            }
+            if (debounce10 == false && debounce8 == false)
+            {
+                count2 = count2 + 1;
+
+
+            }
+
+            if (debounce8 == false)
+            {
+                newTag = "Chlor_8";
+            }
+
+            this.transform.parent.tag = newTag;
+            if (debounce == true)
+            {
+                return;
+            }
+
+            count10 = count10 + 1;
+
+            debounce = true;
+            debounce10 = true;
+            debounce8 = true;
+            other.GetComponent<Chlorine_Success>().stort1(obj, count10, tag1);
+
+
+            Invoke("ResetCounter", 0.5f);
+
+        }
+
 
     }
     private void OnTriggerExit(Collider other)
@@ -313,9 +406,9 @@ public class detection : MonoBehaviour
             }
 
             debounce8 = false;
+             this.transform.parent.tag = oldTag;
 
         }
-
 
         if (other.CompareTag("Chlorine_1"))
         {
@@ -327,6 +420,7 @@ public class detection : MonoBehaviour
             }
 
             debounce8 = false;
+             this.transform.parent.tag = oldTag;
         }
 
         if (other.CompareTag("Chlorine_2"))
@@ -339,6 +433,7 @@ public class detection : MonoBehaviour
             }
 
             debounce8 = false;
+             this.transform.parent.tag = oldTag;
         }
 
         if (other.CompareTag("Chlorine_3"))
@@ -351,6 +446,7 @@ public class detection : MonoBehaviour
             }
 
             debounce8 = false;
+             this.transform.parent.tag = oldTag;
         }
 
         if (other.CompareTag("Chlorine_4"))
@@ -363,8 +459,8 @@ public class detection : MonoBehaviour
             }
 
             debounce8 = false;
+             this.transform.parent.tag = oldTag;
         }
-
 
         if (other.CompareTag("Chlorine_5"))
         {
@@ -376,9 +472,35 @@ public class detection : MonoBehaviour
             }
 
             debounce8 = false;
+             this.transform.parent.tag = oldTag;
         }
 
+        if (other.CompareTag("Chlorine_6"))
+        {
+            count9 = count9 - 1;
+
+            if (count9 < 0)
+            {
+                count9 = 0;
+            }
+             this.transform.parent.tag = oldTag;
+        }
+
+        if (other.CompareTag("Chlorine_7"))
+        {
+            count10 = count10 - 1;
+
+            if (count10 < 0)
+            {
+                count10 = 0;
+            }
+
+            debounce8 = false;
+                 this.transform.parent.tag = oldTag;
+            }
     }
+
+    
 
 
     public void ResetCounter()

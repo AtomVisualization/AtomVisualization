@@ -194,7 +194,7 @@ PrefabInstance:
     - target: {fileID: 7970082808205716211, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e642b64bb1313e5489f771164d02d7c2, type: 2}
+      objectReference: {fileID: 2100000, guid: 2b1a8d77e7400c64094e90281f14bea5, type: 2}
     - target: {fileID: 8474525891641412390, guid: e73fc19aebb9a4848bdfe9cccaedd8fd, type: 3}
       propertyPath: m_Name
       value: Sodium
@@ -308,6 +308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9763cc843b8316b47bc2bd8b49e81da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  next: {fileID: 0}
+  count3: 0
 --- !u!135 &8569903090632542073
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -417,6 +419,10 @@ PrefabInstance:
       propertyPath: _pointableElement
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6003020945329841701, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0069ce6a7f09af841980b5c8bbc68c28, type: 2}
     - target: {fileID: 7163104987388311503, guid: 904876ddd30019949a98f8c7eaf8ae9c, type: 3}
       propertyPath: _pointable
       value: 
@@ -461,6 +467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba961e63c6ac0d458ba6f608d305a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  next: {fileID: 0}
+  count3: 0
 --- !u!135 &7451858063908104282
 SphereCollider:
   m_ObjectHideFlags: 0

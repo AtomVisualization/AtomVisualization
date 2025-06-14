@@ -45,6 +45,14 @@ TagManager:
   - Sod_4
   - Sod_5
   - Sod_6
+  - Sodium_6
+  - Sodium_7
+  - Chlorine_6
+  - Chlorine_7
+  - Chlor_7
+  - Chlor_8
+  - Sod_7
+  - Sod_8
   layers:
   - Default
   - TransparentFX

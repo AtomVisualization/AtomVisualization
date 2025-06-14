@@ -56,7 +56,7 @@ public class Chlorine_Success : MonoBehaviour
         float count4 = detection.count2;
         GameObject[] waters = GameObject.FindGameObjectsWithTag(tag1);
 
-
+        Debug.Log("chlorine " + tag1);
 
         foreach (GameObject water in waters)
         {

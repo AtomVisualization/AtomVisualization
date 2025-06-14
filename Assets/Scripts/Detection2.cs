@@ -18,6 +18,8 @@ public class Detection2 : MonoBehaviour
     public static float count6 = 0;
     public static float count7 = 0;
     public static float count8 = 0;
+    public static float count9 = 0;
+    public static float count10 = 0;
     private static bool debounce2 = false;
     private static bool debounce3 = false;
     private static bool debounce4 = false;
@@ -25,6 +27,8 @@ public class Detection2 : MonoBehaviour
     private static bool debounce6 = false;
     private static bool debounce7 = false;
     private bool debounce8 = false;
+    private static bool debounce9 = false;
+    private static bool debounce10 = false;
     private string tag1;
 
 
@@ -46,7 +50,7 @@ public class Detection2 : MonoBehaviour
             }
             tag1 = "Sod_1";
 
-            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6")
+            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6" || this.transform.parent.tag == "Chlor_7" || this.transform.parent.tag == "Chlor_8" )
             {
                 return;
             }
@@ -83,14 +87,14 @@ public class Detection2 : MonoBehaviour
         if (other.CompareTag("Sodium_1"))
         {
 
-             if (debounce8 == true)
+            if (debounce8 == true)
             {
                 return;
             }
 
             tag1 = "Sod_2";
 
-            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6")
+            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6" || this.transform.parent.tag == "Chlor_7" || this.transform.parent.tag == "Chlor_8" )
             {
                 return;
             }
@@ -117,7 +121,7 @@ public class Detection2 : MonoBehaviour
             debounce = true;
             debounce3 = true;
             debounce8 = true;
-            other.GetComponent<Sodium_Success>().stort1(obj, count3, tag1);
+            other.GetComponent<Sodium_Success>().stort1(obj, count4, tag1);
 
 
             Invoke("ResetCounter", 0.5f);
@@ -128,13 +132,13 @@ public class Detection2 : MonoBehaviour
         if (other.CompareTag("Sodium_2"))
         {
 
-             if (debounce8 == true)
+            if (debounce8 == true)
             {
                 return;
             }
             tag1 = "Sod_3";
 
-            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6")
+            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6" || this.transform.parent.tag == "Chlor_7" || this.transform.parent.tag == "Chlor_8" )
             {
                 return;
             }
@@ -161,7 +165,7 @@ public class Detection2 : MonoBehaviour
             debounce = true;
             debounce4 = true;
             debounce8 = true;
-            other.GetComponent<Sodium_Success>().stort1(obj, count3, tag1);
+            other.GetComponent<Sodium_Success>().stort1(obj, count5, tag1);
 
 
             Invoke("ResetCounter", 0.5f);
@@ -171,14 +175,13 @@ public class Detection2 : MonoBehaviour
         if (other.CompareTag("Sodium_3"))
         {
 
-             if (debounce8 == true)
+            if (debounce8 == true)
             {
                 return;
             }
-
             tag1 = "Sod_4";
 
-            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6")
+            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6" || this.transform.parent.tag == "Chlor_7" || this.transform.parent.tag == "Chlor_8" )
             {
                 return;
             }
@@ -193,6 +196,7 @@ public class Detection2 : MonoBehaviour
             {
                 newTag = "Sod_4";
             }
+
             this.transform.parent.tag = newTag;
             if (debounce == true)
             {
@@ -204,7 +208,7 @@ public class Detection2 : MonoBehaviour
             debounce = true;
             debounce5 = true;
             debounce8 = true;
-            other.GetComponent<Sodium_Success>().stort1(obj, count3, tag1);
+            other.GetComponent<Sodium_Success>().stort1(obj, count6, tag1);
 
 
             Invoke("ResetCounter", 0.5f);
@@ -214,14 +218,14 @@ public class Detection2 : MonoBehaviour
         if (other.CompareTag("Sodium_4"))
         {
 
-             if (debounce8 == true)
+            if (debounce8 == true)
             {
                 return;
             }
 
             tag1 = "Sod_5";
 
-           if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6")
+            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6" || this.transform.parent.tag == "Chlor_7" || this.transform.parent.tag == "Chlor_8" )
             {
                 return;
             }
@@ -236,7 +240,7 @@ public class Detection2 : MonoBehaviour
             {
                 newTag = "Sod_5";
             }
-            
+
 
             this.transform.parent.tag = newTag;
             if (debounce == true)
@@ -249,7 +253,7 @@ public class Detection2 : MonoBehaviour
             debounce = true;
             debounce6 = true;
             debounce8 = true;
-            other.GetComponent<Sodium_Success>().stort1(obj, count3, tag1);
+            other.GetComponent<Sodium_Success>().stort1(obj, count7, tag1);
 
 
             Invoke("ResetCounter", 0.5f);
@@ -258,14 +262,14 @@ public class Detection2 : MonoBehaviour
         if (other.CompareTag("Sodium_5"))
         {
 
-             if (debounce8 == true)
+            if (debounce8 == true)
             {
                 return;
             }
 
             tag1 = "Sod_6";
 
-            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6")
+           if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6" || this.transform.parent.tag == "Chlor_7" || this.transform.parent.tag == "Chlor_8" )
             {
                 return;
             }
@@ -292,13 +296,100 @@ public class Detection2 : MonoBehaviour
             debounce = true;
             debounce7 = true;
             debounce8 = true;
-            other.GetComponent<Sodium_Success>().stort1(obj, count3, tag1);
+            other.GetComponent<Sodium_Success>().stort1(obj, count8, tag1);
 
 
             Invoke("ResetCounter", 0.5f);
 
         }
 
+        if (other.CompareTag("Sodium_6"))
+        {
+
+            if (debounce8 == true)
+            {
+                return;
+            }
+
+            tag1 = "Sod_7";
+
+            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6" || this.transform.parent.tag == "Chlor_7" || this.transform.parent.tag == "Chlor_8" )
+            {
+                return;
+            }
+            if (debounce9 == false && debounce8 == false)
+            {
+                count2 = count2 + 1;
+
+
+            }
+
+            if (debounce8 == false)
+            {
+                newTag = "Sod_7";
+            }
+
+            this.transform.parent.tag = newTag;
+            if (debounce == true)
+            {
+                return;
+            }
+
+            count9 = count9 + 1;
+
+            debounce = true;
+            debounce7 = true;
+            debounce8 = true;
+            other.GetComponent<Sodium_Success>().stort1(obj, count9, tag1);
+
+
+            Invoke("ResetCounter", 0.5f);
+
+        }
+        
+        if (other.CompareTag("Sodium_7"))
+        {
+
+             if (debounce8 == true)
+            {
+                return;
+            }
+
+            tag1 = "Sod_8";
+
+            if (this.transform.parent.tag == "Chlor_1" || this.transform.parent.tag == "Chlor_2"  || this.transform.parent.tag == "Chlor_3"  || this.transform.parent.tag == "Chlor_4"  || this.transform.parent.tag == "Chlor_5" || this.transform.parent.tag == "Chlor_6" || this.transform.parent.tag == "Chlor_7" || this.transform.parent.tag == "Chlor_8" )
+            {
+                return;
+            }
+            if (debounce10 == false && debounce8 == false)
+            {
+                count2 = count2 + 1;
+
+
+            }
+
+            if (debounce8 == false)
+            {
+                newTag = "Sod_8";
+            }
+
+            this.transform.parent.tag = newTag;
+            if (debounce == true)
+            {
+                return;
+            }
+
+            count10 = count10 + 1;
+
+            debounce = true;
+            debounce10 = true;
+            debounce8 = true;
+            other.GetComponent<Sodium_Success>().stort1(obj, count10, tag1);
+
+
+            Invoke("ResetCounter", 0.5f);
+
+        }
 
     }
     private void OnTriggerExit(Collider other)
@@ -314,6 +405,9 @@ public class Detection2 : MonoBehaviour
 
             debounce8 = false;
 
+            this.transform.parent.tag = oldTag;
+
+
         }
 
 
@@ -327,6 +421,8 @@ public class Detection2 : MonoBehaviour
             }
 
             debounce8 = false;
+
+            this.transform.parent.tag = oldTag;
         }
 
         if (other.CompareTag("Chlorine_2"))
@@ -339,6 +435,8 @@ public class Detection2 : MonoBehaviour
             }
 
             debounce8 = false;
+
+            this.transform.parent.tag = oldTag;
         }
 
         if (other.CompareTag("Chlorine_3"))
@@ -351,6 +449,8 @@ public class Detection2 : MonoBehaviour
             }
 
             debounce8 = false;
+
+            this.transform.parent.tag = oldTag;
         }
 
         if (other.CompareTag("Chlorine_4"))
@@ -363,6 +463,8 @@ public class Detection2 : MonoBehaviour
             }
 
             debounce8 = false;
+
+            this.transform.parent.tag = oldTag;
         }
 
 
@@ -376,7 +478,38 @@ public class Detection2 : MonoBehaviour
             }
 
             debounce8 = false;
+
+            this.transform.parent.tag = oldTag;
         }
+
+        if (other.CompareTag("Chlorine_6"))
+        {
+            count9 = count9 - 1;
+
+            if (count9 < 0)
+            {
+                count9 = 0;
+            }
+
+            debounce8 = false;
+
+            this.transform.parent.tag = oldTag;
+        }
+
+        if (other.CompareTag("Chlorine_7"))
+        {
+            count10 = count10 - 1;
+
+            if (count10 < 0)
+            {
+                count10 = 0;
+            }
+
+            debounce8 = false;
+            
+            this.transform.parent.tag = oldTag;
+        }
+
 
     }
 
