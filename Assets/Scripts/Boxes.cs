@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Boxes : MonoBehaviour
 {
+    // all the boxes and a list of things to deactivate
     public string bond;
     public GameObject box1;
     public GameObject box2;
@@ -16,12 +17,16 @@ public class Boxes : MonoBehaviour
 
     public void boxes_appear()
     {
+        // grabs the current bond that is selected
         bond = Bond_Switcher.Bondd;
 
+        // deletes all items in deactivate (other boxes)
       foreach (GameObject obj in deactivate)
         {
             obj.SetActive(false);
         }
+
+      //activates boxes based on the current bond
 
         if (bond == "NaCl")
         {

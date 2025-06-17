@@ -15,6 +15,44 @@ TagManager:
   - Chlorine
   - boxes
   - bond
+  - new
+  - Rings
+  - H2O
+  - water
+  - salt
+  - water2
+  - water2C
+  - water3
+  - Chlorine_1
+  - Chlorine_2
+  - Chlorine_3
+  - Chlorine_4
+  - Chlorine_5
+  - Sodium_1
+  - Sodium_2
+  - Sodium_3
+  - Sodium_4
+  - Sodium_5
+  - Chlor_1
+  - Chlor_2
+  - Chlor_3
+  - Chlor_4
+  - Chlor_5
+  - Chlor_6
+  - Sod_1
+  - Sod_2
+  - Sod_3
+  - Sod_4
+  - Sod_5
+  - Sod_6
+  - Sodium_6
+  - Sodium_7
+  - Chlorine_6
+  - Chlorine_7
+  - Chlor_7
+  - Chlor_8
+  - Sod_7
+  - Sod_8
   layers:
   - Default
   - TransparentFX

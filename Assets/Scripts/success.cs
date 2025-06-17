@@ -20,7 +20,16 @@ public class success : MonoBehaviour
     public GameObject CH4_Anim;
     public GameObject NaCl_Anim;
     public GameObject H2O_Anim;
-    
+    public GameObject Success_H2;
+    public GameObject Success_CH4;
+    public GameObject Success_NaCl;
+    public GameObject Success_H2O;
+    public AudioSource success_sound;
+    public GameObject next;
+    public GameObject H2O_blob;
+    public GameObject CH4_blob;
+    public GameObject H2_blob;
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -52,6 +61,9 @@ public class success : MonoBehaviour
                 Invoke("confirm", 1);
                 check1 = false;
                 check2 = false;
+                success_sound.Play();
+                next.SetActive(true);
+
             }
         }
 
@@ -70,6 +82,7 @@ public class success : MonoBehaviour
                 check3 = false;
                 check4 = false;
                 check5 = false;
+                success_sound.Play();
             }
         }
         else if (bond == "NaCl")
@@ -84,6 +97,7 @@ public class success : MonoBehaviour
                 Invoke("confirm", 1);
                 check1 = false;
                 checkCL = false;
+                success_sound.Play();
             }
         }
 
@@ -100,6 +114,7 @@ public class success : MonoBehaviour
                 check2 = false;
                 checkH1 = false;
                 checkH2 = false;
+                success_sound.Play();
             }
         }
     }
@@ -112,7 +127,7 @@ public class success : MonoBehaviour
         GameObject[] hydrogens = GameObject.FindGameObjectsWithTag("Hydrogen");
         GameObject[] carbons = GameObject.FindGameObjectsWithTag("Carbon");
         GameObject[] sodiums = GameObject.FindGameObjectsWithTag("Sodium");
-        GameObject[] chlorines  = GameObject.FindGameObjectsWithTag("Chlorine");
+        GameObject[] chlorines = GameObject.FindGameObjectsWithTag("Chlorine");
         GameObject[] oxygens = GameObject.FindGameObjectsWithTag("Oxygen");
         GameObject[] boxes = GameObject.FindGameObjectsWithTag("boxes");
         if (bond == "H2")
@@ -130,6 +145,9 @@ public class success : MonoBehaviour
             }
 
             Instantiate(H2_Anim);
+            Success_H2.SetActive(true);
+            Invoke("deactivate", 3);
+            Invoke("H2_BLOB", 8);
         }
         else if (bond == "CH4")
         {
@@ -151,6 +169,9 @@ public class success : MonoBehaviour
             }
 
             Instantiate(CH4_Anim);
+            Success_CH4.SetActive(true);
+            Invoke("deactivate", 3);
+            Invoke("CH4_BLOB", 8);
         }
 
         else if (bond == "NaCl")
@@ -172,9 +193,11 @@ public class success : MonoBehaviour
             }
 
             Instantiate(NaCl_Anim);
+            Success_NaCl.SetActive(true);
+            Invoke("deactivate", 3);
         }
 
-    else if (bond == "H2O")
+        else if (bond == "H2O")
         {
             foreach (GameObject oxygen in oxygens)
             {
@@ -193,7 +216,13 @@ public class success : MonoBehaviour
             }
 
             Instantiate(H2O_Anim);
+            Success_H2O.SetActive(true);
+            Invoke("deactivate", 3);
+            Invoke("H2O_BLOB", 8);
+
+
         }
+
 
     }
 
@@ -208,4 +237,29 @@ public class success : MonoBehaviour
             Destroy(bond);
         }
     }
+
+    void deactivate()
+    {
+        Success_H2.SetActive(false);
+        Success_CH4.SetActive(false);
+        Success_NaCl.SetActive(false);
+        Success_H2O.SetActive(false);
+    }
+
+    void H2O_BLOB()
+    {
+        H2O_blob.SetActive(true);
+    }
+
+    void CH4_BLOB()
+    {
+        CH4_blob.SetActive(true);
+    }
+
+    void H2_BLOB()
+    {
+        H2_blob.SetActive(true);
+    }
+
+
 }
